@@ -1,0 +1,64 @@
+
+
+cd folder
+yarn create-react-app name-of-project
+cd project-folder
+code .
+yarn add tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+yarn start
+yarn add react-icons
+npm install react-scroll / yarn add react-scroll
+
+yarn add nodemailer react-dom react
+
+
+
+
+const express = require("express");
+
+const nodemailer = require("nodemailer");
+
+const routerMails = express.Router();
+
+routerMails.post("/send-email", async (req, res) => {
+  const { name, email, message } = req.body;
+  console.log(req.body);
+
+  contentHTML = `
+        <h2>You have a new message from:</h2>
+        <ul>
+            <li><h3>Name: ${name}</h3></li>
+            <li><h3>Email: ${email}</h3></li>
+        </ul>
+        <h3>Message:</h3>
+        <p>${message}</p>
+    `;
+
+  console.log(contentHTML);
+
+  const transport = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: "amustino30@gmail.com",
+      pass: "smrlocisaknpkklm",
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+  const defaults = await transport.sendMail({
+    from: '"Portfolio messages 🌎" <amustino30@gmail.com',
+    to: "agustintcruz@gmail.com, amustino30@gmail.com",
+    subject: "Formulario de contacto",
+    html: contentHTML,
+  });
+  console.log(" Message sent ", defaults.messageId);
+
+  res.redirect("/");
+});
+
+module.exports = routerMails;

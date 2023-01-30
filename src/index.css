@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Oswald&family=Raleway&display=swap");
+
+@layer base{
+  body{
+    @apply font-[Raleway]
+  }
+  li{
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+}
+@media (max-width:640px) {
+  body{
+    font-family:'Trebuchet MS', sans-serif
+  } 
+}
+.outline-white input:focus-within ~ label,
+.outline-white input:not(:placeholder-shown) ~ label {
+  @apply transform scale-75 -translate-y-3 z-0 ml-3 px-1 py-0;
+}
+input:not(:focus-within) ~ label {
+  @apply transform duration-300 scale-100;
+}
+.outline-white textarea:focus-within ~ label,
+.outline-white textarea:not(:placeholder-shown) ~ label {
+  @apply transform scale-75 -translate-y-3 z-0 ml-3 px-1 py-0;
+}
+textarea:not(:focus-within) ~ label {
+  @apply transform duration-300 scale-100;
+}
+
+.content-div1{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+}
+
+.switch-checkbox:checked + .switch-label .switch-button{
+
+  /* left: calc(100%-2px); */
+  left:100%;
+  transform: translateX(-22px);
+
+}
+
+.light{
+  background-image: url("https://cdn-icons-png.flaticon.com/128/2910/2910890.png");
+  background-size: cover;
+  
+}
+
+.moon{
+  background-image: url("https://cdn-icons-png.flaticon.com/128/1823/1823397.png");
+  background-size: cover;
+
+}
+
+:root{
+  --color1:#ffe5e1;
+  --color2:#E8B4B0;
+  --color3:#e796a0;
+  --color4:#246d82;
+}
+
+/* orange-300 : #fbd38d */
+/* orange-500: #ed8936 */
+/* pink-600: #d53f8c */
