@@ -23,7 +23,7 @@ const Contact = () => {
     );
     console.log({ mailerState });
     const response = await fetch(
-      "https://server-for-portfolio.vercel.app/send",
+      "https://back-portfolio-fercruz.vercel.app/send",
       {
         method: "POST",
         headers: {
