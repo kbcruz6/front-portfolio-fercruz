@@ -159,7 +159,10 @@ const Contact = () => {
             data-aos-duration="800"
             data-aos-delay="600"
           >
-            <button className="rounded-3xl text-xl shadow-md shadow-slate-600 dark:shadow-black border-2 border-[var(--color3)]  text-slate-600 hover:text-white hover:bg-[var(--color3)] dark:border-orange-200 dark:text-orange-200  dark:hover:bg-orange-500  dark:hover:border-orange-500 duration-300 px-5 py-2 my-3 mx-auto flex items-center">
+            <button
+              disabled
+              className="rounded-3xl hover:cursor-not-allowed text-xl shadow-md shadow-slate-600 dark:shadow-black border-2 border-[var(--color3)]  text-slate-600 hover:text-white hover:bg-[var(--color3)] dark:border-orange-200 dark:text-orange-200  dark:hover:bg-orange-500  dark:hover:border-orange-500 duration-300 px-5 py-2 my-3 mx-auto flex items-center"
+            >
               Send
             </button>
           </div>
