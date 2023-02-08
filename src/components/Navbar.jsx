@@ -131,7 +131,7 @@ const Navbar = () => {
         <div className="hidden lg:flex fixed flex-col lg:top-[36%] lg:left-0">
           <ul>
             {/*//! LinkedIn  */}
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] duration-300 bg-blue-600 rounded-3xl shadow-lg shadow-slate-600 dark:shadow-black">
+            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] duration-300 bg-blue-600 rounded-3xl shadow-lg shadow-black">
               <a
                 href="https://www.linkedin.com/in/maria-fernanda-cruz-0bb077165/"
                 className="flex justify-between items-center w-full text-white"
@@ -141,7 +141,7 @@ const Navbar = () => {
               </a>
             </li>{" "}
             {/*//! Instagram  */}
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] duration-300 bg-orange-500 rounded-3xl shadow-lg shadow-slate-600 dark:shadow-black">
+            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] duration-300 bg-orange-500 rounded-3xl shadow-lg shadow-black">
               <a
                 href="https://www.instagram.com/fercruz.arte/"
                 className="flex justify-between items-center w-full text-white"
@@ -151,7 +151,7 @@ const Navbar = () => {
               </a>
             </li>{" "}
             {/*//! Email  */}
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] rounded-3xl duration-300 bg-[var(--color4)]  shadow-lg shadow-slate-600 dark:shadow-black">
+            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] rounded-3xl duration-300 bg-[var(--color4)]  shadow-lg shadow-black">
               <a
                 href="mailto:mfercruzw@gmail.com"
                 target="_blank"
@@ -161,7 +161,7 @@ const Navbar = () => {
               </a>
             </li>{" "}
             {/*//! CV  */}
-            {/* <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] duration-300 bg-[var(--color4)] rounded-3xl shadow-lg shadow-slate-600 dark:shadow-black">
+            {/* <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] duration-300 bg-[var(--color4)] rounded-3xl shadow-lg shadow-black">
               <a
                 href="https://github.com/kbcruz6/kbcruz6.github.io/raw/main/CvAgustinCruz/CV%20Fernanda%20Cruz.pdf"
                 className="flex justify-between items-center w-full text-white"
@@ -170,7 +170,7 @@ const Navbar = () => {
               </a>
             </li> */}
             {/*//! Phone  */}
-            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] duration-300 bg-[#25D366] rounded-3xl shadow-lg shadow-slate-600 dark:shadow-black">
+            <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] duration-300 bg-[#25D366] rounded-3xl shadow-lg shadow-black">
               <a
                 href="http://api.whatsapp.com/send?phone=97439978605"
                 className="flex justify-between items-center w-full text-white"
