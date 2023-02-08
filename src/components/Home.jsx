@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="flex items-center bg-fixed w-full justify-center h-screen bg-cover custom-img text-white"
+      className="flex items-center lg:bg-fixed w-full justify-center h-screen bg-cover custom-img text-white"
     >
       {/*//! Container */}
       <div

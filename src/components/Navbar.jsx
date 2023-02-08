@@ -65,12 +65,12 @@ const Navbar = () => {
         </li>
 
         {/*//! SKILLS  */}
-        <li className="relative group hover:opacity-90 px-0 mx-2">
+        {/* <li className="relative group hover:opacity-90 px-0 mx-2">
           <Link to="skills" smooth={true} duration={500}>
             Skills
             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
           </Link>
-        </li>
+        </li> */}
 
         {/*//! CONTACT  */}
         <li className="relative group hover:opacity-90 px-0 mx-2">
@@ -131,13 +131,18 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="p-4 text-4xl hover:text-gray-500">
-            <Link onClick={handleNav} to="about" smooth="true">
+            <Link onClick={handleNav} to="work" smooth="true">
+              Work
+            </Link>
+          </li>
+          <li className="p-4 text-4xl hover:text-gray-500">
+            <Link onClick={handleNav} to="gallery" smooth="true">
               Gallery
             </Link>
           </li>
           <li className="p-4 text-4xl hover:text-gray-500">
-            <Link onClick={handleNav} to="work" smooth="true">
-              Work
+            <Link onClick={handleNav} to="about" smooth="true">
+              About Me
             </Link>
           </li>
           <li className="p-4 text-4xl hover:text-gray-500">
