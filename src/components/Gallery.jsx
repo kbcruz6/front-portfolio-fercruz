@@ -23,7 +23,7 @@ const Gallery = () => {
   ];
 
   const [bigDot, setBigDot] = useState(
-    "cursor-pointer text-2xl text-[var(--color3)] duration-300 scale-150"
+    "cursor-pointer text-2xl text-[var(--color4)] dark:text-orange-500 duration-300 scale-150"
   );
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,7 +40,7 @@ const Gallery = () => {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
     setBigDot(
-      "cursor-pointer text-2xl text-[var(--color3)] duration-300 scale-150"
+      "cursor-pointer text-2xl text-[var(--color4)] dark:text-orange-500 duration-300 scale-150"
     );
   };
 
@@ -54,11 +54,11 @@ const Gallery = () => {
         className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
       ></div>
       {/*//! Left arrow  */}
-      <div className="absolute top-[50%] translate-y-[-50%] sm:text-[var(--color3)] sm:bg-transparent bg-black text-[var(--color3)] sm:-left-8 -left-1 text-2xl rounded-full p-2 cursor-pointer hover:scale-110 duration-300">
+      <div className="absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-left-8 -left-1 text-2xl rounded-full p-2 cursor-pointer hover:scale-110 duration-300">
         <FaArrowCircleLeft onClick={prevSlide} />
       </div>
       {/*//! Right arrow  */}
-      <div className="absolute top-[50%] translate-y-[-50%] sm:text-[var(--color3)] sm:bg-transparent bg-black text-[var(--color3)] sm:-right-8 -right-1 text-2xl rounded-full p-2 cursor-pointer hover:scale-110 duration-300">
+      <div className="absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-right-8 -right-1 text-2xl rounded-full p-2 cursor-pointer hover:scale-110 duration-300">
         <FaArrowCircleRight onClick={nextSlide} />
       </div>
 
@@ -71,7 +71,7 @@ const Gallery = () => {
             className={
               slideIndex === currentIndex
                 ? bigDot
-                : "cursor-pointer text-2xl text-[var(--color3)] duration-300"
+                : "cursor-pointer text-2xl text-[var(--color4)] dark:text-orange-500 duration-300"
             }
           >
             <RxDotFilled />

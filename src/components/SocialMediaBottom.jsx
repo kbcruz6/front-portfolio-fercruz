@@ -68,7 +68,7 @@ const SocialMediaBottom = () => {
       <div style={{ opacity: `${opacity}` }}>
         <Link to="home" smooth={true} duration={500} className="">
           <FaArrowCircleUp
-            className="minlg:hidden fixed z-50 bottom-10 right-10 cursor-pointer  duration-300 hover:scale-110 text-[var(--color3)] "
+            className="minlg:hidden fixed z-50 bottom-10 right-10 cursor-pointer  duration-300 hover:scale-110 text-[var(--color4)] dark:text-orange-500 "
             size={30}
           />
         </Link>

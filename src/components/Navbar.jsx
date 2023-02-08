@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="flex fixed w-full h-[60px]  justify-end items-center px-4 shadow-md bottom-0 lg:top-0 z-10 ease-in duration-300 text-white"
+      className="flex fixed w-full h-[60px]  justify-end items-center px-4 bottom-0 lg:top-0 z-10 ease-in duration-300 text-white"
       style={{ backgroundColor: `${color}` }}
     >
       {/*//! Menu */}
@@ -89,7 +89,7 @@ const Navbar = () => {
         </li>
 
         {/*//! TOGGLE SWITCH  */}
-        <li className="hidden relative group hover:opacity-90 px-0 mx-2">
+        <li className=" relative group hover:opacity-90 px-0 mx-2">
           <input
             onChange={onToggle}
             id="switch"
@@ -100,16 +100,16 @@ const Navbar = () => {
           <label
             className={
               checked
-                ? "switch-label flex items-center bg-slate-300 dark:bg-orange-500 w-[45px] h-[25px] rounded-full relative cursor-pointer"
-                : "switch-label flex items-center bg-[var(--color2)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
+                ? "switch-label flex items-center bg-[var(--color2)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
+                : "switch-label flex items-center bg-slate-300 dark:bg-orange-500 w-[45px] h-[25px] rounded-full relative cursor-pointer"
             }
             htmlFor="switch"
           >
             <span
               className={
                 checked
-                  ? "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] moon "
-                  : "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] light "
+                  ? "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] light "
+                  : "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] moon "
               }
             />
           </label>

@@ -69,12 +69,12 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen flex justify-center items-center p-4 text-[var(--color4)] bg-[var(--color1)] dark:bg-transparent sm:rounded-b-full rounded-br-[300px] shadow-lg shadow-[var(--color3)] dark:shadow-none"
+      className="w-full h-screen flex justify-center items-center p-4 text-[var(--color1)] dark:bg-transparent sm:rounded-b-full rounded-br-[300px] dark:shadow-none "
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
         <form onSubmit={submitEmail}>
           <div className="pb-1">
-            <p className="text-4xl font-bold inline border-b-4 border-[var(--color4)] text-[var(--color3)] dark:border-orange-500  dark:text-orange-200">
+            <p className="text-4xl font-bold inline border-b-4 border-[var(--color4)] text-[var(--color1)] dark:border-orange-500  dark:text-orange-200">
               Contact me!
             </p>
             <p className="pt-4 pb-2  dark:text-orange-200">
@@ -95,7 +95,7 @@ const Contact = () => {
               />
               <label
                 for="name"
-                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color1)] text-[var(--color4)] font-bold dark:bg-[#0d1e3a] dark:text-orange-500"
+                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color2)] text-[var(--color4)] font-bold dark:bg-black dark:text-orange-500"
               >
                 Name
               </label>
@@ -115,7 +115,7 @@ const Contact = () => {
               />
               <label
                 for="email"
-                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color1)] text-[var(--color4)] font-bold dark:bg-[#0d1e3a] dark:text-orange-500"
+                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color2)] text-[var(--color4)] font-bold dark:bg-black dark:text-orange-500"
               >
                 Email
               </label>
@@ -135,7 +135,7 @@ const Contact = () => {
               />
               <label
                 for="message"
-                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color1)] text-[var(--color4)] font-bold dark:bg-[#0d1e3a] dark:text-orange-500"
+                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color2)] text-[var(--color4)] font-bold dark:bg-black dark:text-orange-500"
               >
                 Message
               </label>

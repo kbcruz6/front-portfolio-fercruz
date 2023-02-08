@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className={isDarkTheme ? "dark" : ""}>
-      <div className="bg-black">
+      <div className="dark:bg-black bg-[var(--color2)]">
         {/* <div className="bg-[var(--color2)] dark:bg-transparent"> */}
         <Navbar />
         <Home />
