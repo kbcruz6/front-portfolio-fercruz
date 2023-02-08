@@ -161,50 +161,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/*//! Hamburguer */}
-      {/* <div
-        onClick={handleClick}
-        className="md:hidden z-10 cursor-pointer hover:opacity-90"
-      >
-        {!nav ? <FaBars /> : <FaTimes />}
-      </div> */}
-      {/*//! Mobile menu */}
-      {/* <ul
-        className={
-          "absolute w-full h-[100px] bg-[#0a192f] flex flex-row justify-center items-center mx-auto"
-        }
-      >
-        <li className="py-2 text-lg hover:opacity-80">
-          <Link onClick={handleClick} to="home" smooth={true} duration={500}>
-            Home
-          </Link>
-        </li>
-        <li className="py-2 text-lg hover:opacity-80">
-          {" "}
-          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
-            About
-          </Link>
-        </li>
-        <li className="py-2 text-lg hover:opacity-80">
-          {" "}
-          <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-            Skills
-          </Link>
-        </li>
-        <li className="py-2 text-lg hover:opacity-80 ">
-          {" "}
-          <Link onClick={handleClick} to="work" smooth={true} duration={500}>
-            Work
-          </Link>
-        </li>
-        <li className="py-2 text-lg hover:opacity-80 ">
-          {" "}
-          <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
-            Contact
-          </Link>
-        </li>
-      </ul> */}
-
       {/*//! Social media vertical */}
       <div className="">
         <div className="hidden lg:flex fixed flex-col lg:top-[36%] lg:left-0">
@@ -239,15 +195,6 @@ const Navbar = () => {
                 Email <HiOutlineMail size={30} />
               </a>
             </li>{" "}
-            {/*//! CV  */}
-            {/* <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] duration-300 bg-[var(--color4)] rounded-3xl shadow-lg shadow-black">
-              <a
-                href="https://github.com/kbcruz6/kbcruz6.github.io/raw/main/CvAgustinCruz/CV%20Fernanda%20Cruz.pdf"
-                className="flex justify-between items-center w-full text-white"
-              >
-                Resume <FiPaperclip size={30} />
-              </a>
-            </li> */}
             {/*//! Phone  */}
             <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-15px] pl-[25px] duration-300 bg-[#25D366] rounded-3xl shadow-lg shadow-black">
               <a

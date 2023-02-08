@@ -23,7 +23,7 @@ const Gallery = () => {
   ];
 
   const [bigDot, setBigDot] = useState(
-    "cursor-pointer text-2xl text-[var(--color3)]"
+    "cursor-pointer text-2xl text-[var(--color3)] duration-300 scale-150"
   );
 
   const [currentIndex, setCurrentIndex] = useState(0);
