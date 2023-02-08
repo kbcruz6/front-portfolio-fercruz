@@ -15,7 +15,7 @@ const Home = () => {
       <div
         data-aos="fade-right"
         data-aos-duration="1000"
-        className="max-w-[1000px] mx-auto px-8 flex flex-col h-full duration-300 gap-2 justify-start pt-40"
+        className="max-w-[1000px] mx-auto px-8 flex flex-col h-full duration-300 gap-2 justify-start pt-40 sm:justify-center sm:pt-20"
       >
         <p className="text-xl">Hi there! Welcome to my portfolio! 🎨</p>
         <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color3)]">
