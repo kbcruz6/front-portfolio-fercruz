@@ -22,6 +22,10 @@ const Gallery = () => {
     },
   ];
 
+  const [bigDot, setBigDot] = useState(
+    "cursor-pointer text-2xl text-[var(--color3)]"
+  );
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -35,6 +39,9 @@ const Gallery = () => {
   };
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
+    setBigDot(
+      "cursor-pointer text-2xl text-[var(--color3)] duration-300 scale-150"
+    );
   };
 
   return (
@@ -61,7 +68,11 @@ const Gallery = () => {
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className="cursor-pointer text-2xl text-[var(--color3)]"
+            className={
+              slideIndex === currentIndex
+                ? bigDot
+                : "cursor-pointer text-2xl text-[var(--color3)] duration-300"
+            }
           >
             <RxDotFilled />
           </div>
