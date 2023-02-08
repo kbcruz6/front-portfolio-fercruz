@@ -19,7 +19,7 @@ const Home = () => {
         <h1 className="text-5xl sm:text-6xl font-bold text-[var(--color3)] dark:text-orange-400">
           Fernanda Cruz
         </h1>{" "}
-        <h2 className="text-4xl sm:text-4xl font-bold dark:text-orange-200">
+        <h2 className="text-3xl sm:text-4xl font-bold dark:text-orange-200">
           Muralist, Tattoo Artist & Portraitist.
         </h2>
         {/* <p className="py-4 max-w-[700px] text-justify">
