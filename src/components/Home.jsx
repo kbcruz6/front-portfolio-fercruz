@@ -10,8 +10,8 @@ const Home = () => {
     >
       {/*//! Container */}
       <div
-        data-aos="fade"
-        data-aos-duration="2000"
+        data-aos="fade-up"
+        data-aos-duration="1000"
         className=" px-8 flex flex-col h-full duration-300 gap-2 justify-start pt-40 sm:justify-center sm:pt-20"
       >
         <h1 className="text-5xl sm:text-6xl font-bold text-[var(--color3)] dark:text-orange-400">

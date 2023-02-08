@@ -18,7 +18,7 @@ const About = () => {
           </div>
           <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 sm:items-center">
             <div
-              data-aos="fade"
+              data-aos="fade-up"
               data-aos-duration="1000"
               className="flex sm:justify-end justify-center"
             >
@@ -28,7 +28,7 @@ const About = () => {
               ></img>
             </div>
             <div
-              data-aos="fade"
+              data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="500"
               className="text-justify"
