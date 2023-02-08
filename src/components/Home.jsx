@@ -16,10 +16,10 @@ const Home = () => {
         className="max-w-[1000px] mx-auto px-8 flex flex-col h-full duration-300 gap-2 justify-start pt-40 sm:justify-center sm:pt-20"
       >
         {/* <p className="text-xl">Hi there! Welcome to my portfolio! 🎨</p> */}
-        <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color3)] dark:text-orange-400">
+        <h1 className="text-5xl sm:text-6xl font-bold text-[var(--color3)] dark:text-orange-400">
           Fernanda Cruz
         </h1>{" "}
-        <h2 className="text-4xl sm:text-5xl font-bold dark:text-orange-200">
+        <h2 className="text-4xl sm:text-4xl font-bold dark:text-orange-200">
           Muralist, Tattoo Artist & Portraitist.
         </h2>
         {/* <p className="py-4 max-w-[700px] text-justify">
