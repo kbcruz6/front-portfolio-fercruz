@@ -1,19 +1,45 @@
-import React, { createContext, useState, useContext } from "react";
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import React, { useEffect, useState, useContext } from "react";
+import { FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { FiPaperclip } from "react-icons/fi";
 import { BsWhatsapp, BsInstagram } from "react-icons/bs";
 import { Link } from "react-scroll";
 import "../index.css";
 import { ThemeContext } from "../context/ThemeContext";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const { checked, onToggle } = useContext(ThemeContext);
+  const [nav, setNav] = useState(false);
+  const [color, setColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("white");
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 90) {
+        setColor("#ffffff");
+        setTextColor("#000000");
+      } else {
+        setColor("transparent");
+        setTextColor("#ffffff");
+      }
+    };
+    window.addEventListener("scroll", changeColor);
+  }, []);
 
   return (
-    <div className="fixed w-full h-[40px] flex justify-center items-center px-4 text-[var(--color1)] bg-[var(--color4)] shadow-md  dark:bg-slate-900 dark:text-orange-200 minsm:bottom-0 z-50">
+    <div
+      className="flex fixed w-full h-[60px]  justify-end items-center px-4 shadow-md bottom-0 lg:top-0 z-10 ease-in duration-300 text-white"
+      style={{ backgroundColor: `${color}` }}
+    >
       {/*//! Menu */}
-      <ul className="font-bold flex">
+      <ul
+        style={{ color: `${textColor}` }}
+        className="font-bold hidden lg:flex sm:text-xl "
+      >
         {/*//! HOME  */}
         <li className="relative group hover:opacity-90 px-0 mx-2 ">
           <Link to="home" smooth={true} duration={500} className="">
@@ -55,7 +81,7 @@ const Navbar = () => {
         </li>
 
         {/*//! TOGGLE SWITCH  */}
-        <li className="relative group hover:opacity-90 px-0 mx-2">
+        <li className="hidden relative group hover:opacity-90 px-0 mx-2">
           <input
             onChange={onToggle}
             id="switch"
@@ -81,6 +107,46 @@ const Navbar = () => {
           </label>
         </li>
       </ul>
+
+      {/*//! Mobile Button */}
+      <div onClick={handleNav} className="lg:hidden z-10 cursor-pointer">
+        {nav ? (
+          <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
+        ) : (
+          <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
+        )}
+      </div>
+      {/*//! Mobile Menu  */}
+      <div
+        className={
+          nav
+            ? "lg:hidden absolute left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+            : "lg:hidden absolute left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+        }
+      >
+        <ul>
+          <li className="p-4 text-4xl hover:text-gray-500">
+            <Link onClick={handleNav} to="home" smooth="true">
+              Home
+            </Link>
+          </li>
+          <li className="p-4 text-4xl hover:text-gray-500">
+            <Link onClick={handleNav} to="about" smooth="true">
+              Gallery
+            </Link>
+          </li>
+          <li className="p-4 text-4xl hover:text-gray-500">
+            <Link onClick={handleNav} to="work" smooth="true">
+              Work
+            </Link>
+          </li>
+          <li className="p-4 text-4xl hover:text-gray-500">
+            <Link onClick={handleNav} to="contact" smooth="true">
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
 
       {/*//! Hamburguer */}
       {/* <div

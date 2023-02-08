@@ -9,8 +9,7 @@ const SocialMediaBottom = () => {
   return (
     <div>
       {/*//! Social media horizontal  */}
-      <div className="lg:hidden">
-        {/* <ul className="flex fixed flex-row sm:bottom-0 left-[30%] minsm:top-0 minsm:left-[13%]"> */}
+      <div className="lg:hidden w-full">
         <ul className="flex fixed flex-row top-0 items-center justify-center left-0 right-0">
           {/*//! LinkedIn  */}
           <li className="w-[60px] h-[50px] flex justify-between items-center duration-300 bg-blue-600 hover:scale-125 rounded-3xl shadow-lg  shadow-black">
@@ -66,7 +65,7 @@ const SocialMediaBottom = () => {
       {/*//! ARROW CIRCLE UP  */}
       <Link to="home" smooth={true} duration={500} className="">
         <FaArrowCircleUp
-          className="minsm:hidden fixed  z-50 bottom-10 right-10 cursor-pointer text-[var(--color4)] dark:text-orange-500 dark:hover:text-orange-400 duration-300 hover:scale-110 "
+          className="minlg:hidden fixed z-50 bottom-10 right-10 cursor-pointer text-[var(--color4)] dark:text-orange-500 dark:hover:text-orange-400 duration-300 hover:scale-110 "
           size={30}
         />
       </Link>

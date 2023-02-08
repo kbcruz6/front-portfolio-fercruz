@@ -82,11 +82,7 @@ const Contact = () => {
             </p>
           </div>
           {/*//! Input name */}
-          <div
-            data-aos="fade-right"
-            data-aos-duration="800"
-            data-aos-delay="300"
-          >
+          <div data-aos="fade" data-aos-duration="800" data-aos-delay="300">
             <div className="outline-white rounded-3xl relative shadow-lg shadow-[var(--color3)] dark:shadow-black mb-5 z-10 border-2 border-[var(--color3)] focus-within:border-pink-500 dark:border-orange-200 dark:focus-within:border-orange-500 hover:border-pink-400 dark:hover:border-orange-500 duration-300">
               <input
                 onChange={handleStateChange}
@@ -106,11 +102,7 @@ const Contact = () => {
             </div>
           </div>
           {/*//! Input email */}
-          <div
-            data-aos="fade-left"
-            data-aos-duration="800"
-            data-aos-delay="400"
-          >
+          <div data-aos="fade" data-aos-duration="800" data-aos-delay="400">
             <div className="outline-white rounded-3xl relative shadow-lg shadow-[var(--color3)] dark:shadow-black mb-5 z-10 border-2 border-[var(--color3)] focus-within:border-pink-500 dark:border-orange-200 dark:focus-within:border-orange-500 hover:border-pink-400 dark:hover:border-orange-500 duration-300">
               <input
                 required
@@ -130,11 +122,7 @@ const Contact = () => {
             </div>
           </div>
           {/*//! Textarea message */}
-          <div
-            data-aos="fade-right"
-            data-aos-duration="800"
-            data-aos-delay="500"
-          >
+          <div data-aos="fade" data-aos-duration="800" data-aos-delay="500">
             <div className="outline-white rounded-3xl relative shadow-lg shadow-[var(--color3)] dark:shadow-black mb-5 z-10 border-2 border-[var(--color3)] focus-within:border-pink-500 dark:border-orange-200 dark:focus-within:border-orange-500 hover:border-pink-400 dark:hover:border-orange-500 duration-300">
               <textarea
                 onChange={handleStateChange}
@@ -154,11 +142,7 @@ const Contact = () => {
             </div>
           </div>
           {/*//! Button */}
-          <div
-            data-aos="fade-left"
-            data-aos-duration="800"
-            data-aos-delay="600"
-          >
+          <div data-aos="fade" data-aos-duration="800" data-aos-delay="600">
             <button
               disabled
               className="rounded-3xl hover:cursor-not-allowed text-xl shadow-md shadow-slate-600 dark:shadow-black border-2 border-[var(--color3)]  text-slate-600 hover:text-white hover:bg-[var(--color3)] dark:border-orange-200 dark:text-orange-200  dark:hover:bg-orange-500  dark:hover:border-orange-500 duration-300 px-5 py-2 my-3 mx-auto flex items-center"

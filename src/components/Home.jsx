@@ -6,16 +6,14 @@ const Home = () => {
   return (
     <div
       name="home"
-      // className="w-full h-screen rounded-tl-[8000px] rounded-br-full duration-300 bg-[var(--color1)] shadow-lg shadow-[var(--color3)] text-[var(--color4)] dark:shadow-none dark:bg-transparent dark:text-orange-200"
-      className="flex items-center justify-center h-screen bg-cover custom-img text-white"
+      className="flex items-center bg-fixed w-full justify-center h-screen bg-cover custom-img text-white"
     >
       {/*//! Container */}
       <div
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        className="max-w-[1000px] mx-auto px-8 flex flex-col h-full duration-300 gap-2 justify-start pt-40 sm:justify-center sm:pt-20"
+        data-aos="fade"
+        data-aos-duration="2000"
+        className=" px-8 flex flex-col h-full duration-300 gap-2 justify-start pt-40 sm:justify-center sm:pt-20"
       >
-        {/* <p className="text-xl">Hi there! Welcome to my portfolio! 🎨</p> */}
         <h1 className="text-5xl sm:text-6xl font-bold text-[var(--color3)] dark:text-orange-400">
           Fernanda Cruz
         </h1>{" "}

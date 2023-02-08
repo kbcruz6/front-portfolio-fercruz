@@ -15,6 +15,7 @@ import { ThemeContext } from "./context/ThemeContext";
 //! AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Gallery from "./components/Gallery.jsx";
 AOS.init();
 
 function App() {
@@ -30,9 +31,10 @@ function App() {
         {/* <div className="bg-[var(--color2)] dark:bg-transparent"> */}
         <Navbar />
         <Home />
+        <Gallery />
         <Work />
         <About />
-        <Skills />
+        {/* <Skills /> */}
         <Contact />
         <SocialMediaBottom />
       </div>
