@@ -74,4 +74,14 @@ textarea:not(:focus-within) ~ label {
 .custom-img{
   background-image:url("../src/assets/1.jpeg");
 }
+.custom-img::before{
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position:absolute;
+  background-color: black;
+  opacity:0.7;
+}
 
