@@ -1,11 +1,22 @@
-import React, { useState } from "react";
-import { FaArrowCircleUp, FaGithub, FaLinkedin } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaArrowCircleUp, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { FiPaperclip } from "react-icons/fi";
 import { BsWhatsapp, BsInstagram } from "react-icons/bs";
 import { Link } from "react-scroll";
 
 const SocialMediaBottom = () => {
+  const [opacity, setOpacity] = useState(0);
+
+  useEffect(() => {
+    const changeOpacity = () => {
+      if (window.scrollY >= 90) {
+        setOpacity(1);
+      } else {
+        setOpacity(0);
+      }
+    };
+    window.addEventListener("scroll", changeOpacity);
+  }, []);
   return (
     <div>
       {/*//! Social media horizontal  */}
@@ -41,15 +52,6 @@ const SocialMediaBottom = () => {
               <HiOutlineMail size={30} />
             </a>
           </li>{" "}
-          {/*//! CV  */}
-          {/* <li className="w-[60px] h-[50px] flex justify-between items-center duration-300 bg-[var(--color4)] hover:scale-125 rounded-3xl shadow-lg  shadow-black">
-            <a
-              href="https://github.com/kbcruz6/kbcruz6.github.io/raw/main/CvAgustinCruz/CV%20Fernanda%20Cruz.pdf"
-              className="flex justify-between items-center w-full text-gray-300"
-            >
-              <FiPaperclip size={30} />
-            </a>
-          </li> */}
           {/*//! Phone  */}
           <li className="w-[60px] h-[50px] flex justify-between items-center duration-300 bg-[#25D366] hover:scale-125 rounded-3xl shadow-lg  shadow-black">
             <a
@@ -63,12 +65,14 @@ const SocialMediaBottom = () => {
         </ul>
       </div>
       {/*//! ARROW CIRCLE UP  */}
-      <Link to="home" smooth={true} duration={500} className="">
-        <FaArrowCircleUp
-          className="minlg:hidden fixed z-50 bottom-10 right-10 cursor-pointer text-[var(--color4)] dark:text-orange-500 dark:hover:text-orange-400 duration-300 hover:scale-110 "
-          size={30}
-        />
-      </Link>
+      <div style={{ opacity: `${opacity}` }}>
+        <Link to="home" smooth={true} duration={500} className="">
+          <FaArrowCircleUp
+            className="minlg:hidden fixed z-50 bottom-10 right-10 cursor-pointer  duration-300 hover:scale-110 text-[var(--color4)] "
+            size={30}
+          />
+        </Link>
+      </div>
     </div>
   );
 };
