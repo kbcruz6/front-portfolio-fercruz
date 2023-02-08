@@ -18,10 +18,10 @@ const Home = () => {
         className="max-w-[1000px] mx-auto px-8 flex flex-col h-full duration-300 gap-2 justify-start pt-40 sm:justify-center sm:pt-20"
       >
         <p className="text-xl">Hi there! Welcome to my portfolio! 🎨</p>
-        <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color3)]">
+        <h1 className="text-4xl sm:text-5xl font-bold text-[var(--color3)] dark:text-orange-400">
           I'm Fernanda Cruz
         </h1>{" "}
-        <h2 className="text-4xl sm:text-5xl font-bold">
+        <h2 className="text-4xl sm:text-5xl font-bold dark:text-orange-200">
           a Muralist, Tattoo Artist & Portraitist.
         </h2>
         {/* <p className="py-4 max-w-[700px] text-justify">
@@ -31,7 +31,7 @@ const Home = () => {
           </p> */}
         <div>
           <Link to="work" smooth={true} duration={500}>
-            <button className="rounded-3xl shadow-md shadow-black group px-4 py-3 my-2 flex items-center border-2 border-[var(--color3)] hover:text-white hover:bg-[var(--color3)] duration-300">
+            <button className="rounded-3xl shadow-md shadow-black group px-4 py-3 my-2 flex items-center border-2 border-[var(--color3)] hover:text-white hover:bg-[var(--color3)] duration-300 dark:border-orange-500 dark:hover:bg-orange-500">
               Have a look!
               <HiArrowNarrowDown className="ml-3 animate-bounce" />
             </button>
