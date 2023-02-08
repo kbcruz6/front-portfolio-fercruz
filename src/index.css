@@ -72,9 +72,10 @@ textarea:not(:focus-within) ~ label {
 /* pink-600: #d53f8c */
 
 .custom-img{
-  background-image:url("../src/assets/1.jpeg");
+  background-image:url("../src/assets/1.jpeg"), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+  background-blend-mode: overlay;
 }
-.custom-img::before{
+/* .custom-img::before{
   content: "";
   top: 0;
   bottom: 0;
@@ -84,5 +85,5 @@ textarea:not(:focus-within) ~ label {
   background-color: black;
   opacity:0.7;
   height:100vh;
-}
+} */
 
