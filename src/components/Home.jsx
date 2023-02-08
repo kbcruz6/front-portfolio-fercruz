@@ -10,7 +10,7 @@ const Home = () => {
       className="flex items-center justify-center h-screen bg-cover custom-img text-white"
     >
       {/*//! Overlay  */}
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70">
+      <div className="absolute top-0 left-0 right-0 bottom-0 h-screen bg-black/70">
         {/*//! Container */}
         <div
           data-aos="fade-right"
@@ -30,7 +30,7 @@ const Home = () => {
             professionally and personally.
           </p> */}
           <div>
-            <Link to="about" smooth={true} duration={500}>
+            <Link to="work" smooth={true} duration={500}>
               <button className="rounded-3xl shadow-md shadow-slate-600 group px-4 py-3 my-2 flex items-center border-2 border-[var(--color3)] hover:text-white hover:bg-[var(--color3)] duration-300">
                 Have a look!
                 <HiArrowNarrowDown className="ml-3 animate-bounce" />
