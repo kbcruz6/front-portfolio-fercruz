@@ -10,7 +10,8 @@ const SocialMediaBottom = () => {
     <div>
       {/*//! Social media horizontal  */}
       <div className="lg:hidden">
-        <ul className="flex fixed flex-row sm:bottom-0 left-[30%] minsm:top-0 minsm:left-[13%]">
+        {/* <ul className="flex fixed flex-row sm:bottom-0 left-[30%] minsm:top-0 minsm:left-[13%]"> */}
+        <ul className="flex fixed flex-row top-0 items-center justify-center left-0 right-0">
           {/*//! LinkedIn  */}
           <li className="w-[60px] h-[50px] flex justify-between items-center duration-300 bg-blue-600 hover:scale-125 rounded-3xl shadow-lg shadow-slate-400 dark:shadow-black">
             <a

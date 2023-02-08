@@ -24,11 +24,11 @@ const Home = () => {
           <h2 className="text-4xl sm:text-7xl font-bold">
             a Muralist, Tattoo Artist & Portraitist.
           </h2>
-          <p className="py-4 max-w-[700px] text-justify">
+          {/* <p className="py-4 max-w-[700px] text-justify">
             As a highly motivated Artist, I'm looking for new challenges around
             the world, to continue creating Visual Arts and growing
             professionally and personally.
-          </p>
+          </p> */}
           <div>
             <Link to="about" smooth={true} duration={500}>
               <button className="rounded-3xl shadow-md shadow-slate-600 group px-4 py-3 my-2 flex items-center border-2 border-[var(--color3)] hover:text-white hover:bg-[var(--color3)] duration-300">
