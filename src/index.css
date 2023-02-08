@@ -83,5 +83,6 @@ textarea:not(:focus-within) ~ label {
   position:absolute;
   background-color: black;
   opacity:0.7;
+  background-size:inherit;
 }
 
