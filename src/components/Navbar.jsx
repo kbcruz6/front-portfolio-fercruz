@@ -115,6 +115,32 @@ const Navbar = () => {
           </label>
         </li>
       </ul>
+      {/*//! TOGGLE SWITCH  */}
+      <div className="sm:hidden relative group hover:opacity-90 px-0 mx-2">
+        <input
+          onChange={onToggle}
+          id="switch"
+          type="checkbox"
+          className="switch-checkbox hidden"
+          checked={checked}
+        />
+        <label
+          className={
+            checked
+              ? "switch-label flex items-center bg-[var(--color2)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
+              : "switch-label flex items-center bg-slate-300 dark:bg-orange-500 w-[45px] h-[25px] rounded-full relative cursor-pointer"
+          }
+          htmlFor="switch"
+        >
+          <span
+            className={
+              checked
+                ? "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] light "
+                : "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] moon "
+            }
+          />
+        </label>
+      </div>
 
       {/*//! Mobile Button */}
       <div onClick={handleNav} className="lg:hidden z-10 cursor-pointer">
@@ -124,6 +150,7 @@ const Navbar = () => {
           <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
         )}
       </div>
+
       {/*//! Mobile Menu  */}
       <div
         className={
