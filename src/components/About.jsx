@@ -34,24 +34,22 @@ const About = () => {
               className="text-justify"
             >
               <p>
-                I am very curious and persistent, what is super useful in this
-                environment to face the daily challenges and solve problems.{" "}
+                I am a multidisciplinary artist with a passion for creating
+                impactful, meaningful artwork. As a muralist, tattoo artist and
+                portraitist, I have honed my skills to produce works that not
+                only aesthetically pleasing but also deeply personal and
+                thought-provoking. .{" "}
                 <p className="my-2">
-                  I have a creative way to think above and beyond, also a great
-                  ability to learn quickly and flexibility to continuous change.
+                  With a background in fine arts and a love for travel, I bring
+                  a unique perspective to my art that draws inspiration from my
+                  experiences and the world around me.
                 </p>
                 <p className="my-2">
-                  I am good at motivating people and also finding weaknesses,
-                  which provides us the opportunity to improve them and allows
-                  us to continue growing.
+                  Fluent in English, Spanish and Portuguese, I am able to
+                  connect with a diverse range of people and bring their stories
+                  to life through my work.
                 </p>
-                <p>
-                  I enjoy a lot travelling & I would love to work remotely.
-                  Visiting new places, getting to know new people, and
-                  practicing trekking are my passions, I really love nature
-                  life.
-                </p>
-                <p className="mt-2">Enjoy the journey!</p>
+                <p>Welcome to my creative journey.</p>
               </p>
             </div>
           </div>
