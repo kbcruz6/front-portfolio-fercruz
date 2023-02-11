@@ -63,17 +63,18 @@ const Gallery = () => {
         // pagination={true}
         spaceBetween={50}
         grabCursor={true}
+        slidesPerView={window.innerWidth < 768 ? 1 : 3}
         breakpoints={{
           // when window width is >= 640px
           640: {
             width: 640,
-            slidesPerView: 2,
+            // slidesPerView: 1,
           },
           // when window width is >= 768px
           768: {
             // width: 768,
             // height: 500,
-            slidesPerView: 3,
+            // slidesPerView: 3,
           },
         }}
         effect="coverflow"

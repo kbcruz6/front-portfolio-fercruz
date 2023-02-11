@@ -8,7 +8,7 @@ import portraits from "../assets/foto3.jpeg";
 const Work = () => {
   return (
     <div
-      name="work"
+      name="categories"
       className="w-full sm:h-screen text-[var(--color4)] duration-300 shadow-lg dark:shadow-none dark:text-orange-200 dark:bg-transparent "
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full duration-300">
