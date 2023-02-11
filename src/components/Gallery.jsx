@@ -82,11 +82,7 @@ const Gallery = () => {
       className="h-screen w-full flex justify-center items-center sm:px-28"
     >
       <Swiper
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-          // disabledClass: "swiper-button-disabled",
-        }}
+        navigation={true}
         spaceBetween={50}
         grabCursor={true}
         slidesPerView={window.innerWidth < 900 ? 2 : 3}
