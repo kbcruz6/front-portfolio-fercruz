@@ -101,7 +101,7 @@ const Navbar = () => {
             className={
               checked
                 ? "switch-label flex items-center bg-[var(--color2)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
-                : "switch-label flex items-center bg-slate-300 dark:bg-[var(--color3)] w-[45px] h-[25px] rounded-full relative cursor-pointer"
+                : "switch-label flex items-center bg-slate-300 dark:bg-orange-400 w-[45px] h-[25px] rounded-full relative cursor-pointer"
             }
             htmlFor="switch"
           >
