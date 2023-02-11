@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-coverflow";
+import "../../src/index.css";
 
 //! IMGS
 import fer1 from "../assets/1.jpeg";
@@ -59,13 +60,27 @@ const Gallery = () => {
     >
       <Swiper
         navigation={true}
+        // pagination={true}
         spaceBetween={50}
         grabCursor={true}
-        slidesPerView={window.innerWidth < 900 ? 2 : 3}
+        breakpoints={{
+          // when window width is >= 640px
+          640: {
+            width: 640,
+            slidesPerView: 2,
+          },
+          // when window width is >= 768px
+          768: {
+            // width: 768,
+            // height: 500,
+            slidesPerView: 3,
+          },
+        }}
         effect="coverflow"
         autoHeight={true}
         centeredSlides={true}
         initialSlide={1}
+        zoom={true}
         speed={500}
         autoplay={{
           delay: 2000,
@@ -78,33 +93,36 @@ const Gallery = () => {
           modifier: 1,
           slideShadows: false,
         }}
-        style={{ height: "400px" }}
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
+        }}
         className="mySwiper"
       >
-        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
-          <img src={slides[0]} className="w-full rounded-2xl"></img>
+        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]">
+          <img src={slides[0]} className="w-full rounded-2xl sm:h-auto "></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]">
           {" "}
           <img src={slides[1]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]">
           {" "}
           <img src={slides[2]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]">
           {" "}
           <img src={slides[3]} className="w-full rounded-2xl"></img>
         </SwiperSlide>{" "}
-        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]">
           {" "}
           <img src={slides[4]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]">
           {" "}
           <img src={slides[5]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]">
           {" "}
           <img src={slides[6]} className="w-full  rounded-2xl"></img>
         </SwiperSlide>
