@@ -24,37 +24,17 @@ import fer19 from "../assets/foto12.jpeg";
 const Gallery = () => {
   const slides = [
     fer2,
-    fer3,
     fer4,
-    fer5,
+    fer17,
+    fer18,
     fer6,
     fer7,
-    fer8,
-    fer9,
+    fer16,
     fer10,
     fer11,
     fer12,
-    fer13,
+    fer3,
     fer14,
-    fer15,
-    fer16,
-    fer17,
-    fer18,
-    fer19,
-    // fer1,
-
-    // {
-    //   url: "https://images.unsplash.com/photo-1469362102473-8622cfb973cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2419&q=80",
-    // },
-    // {
-    //   url: "https://images.unsplash.com/photo-1594717527389-a590b56e8d0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    // },
-    // {
-    //   url: "https://images.unsplash.com/photo-1484591974057-265bb767ef71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    // },
-    // {
-    //   url: "https://images.unsplash.com/photo-1545917992-dea2d782ef46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2489&q=80",
-    // },
   ];
 
   const [bigDot, setBigDot] = useState(
@@ -87,25 +67,17 @@ const Gallery = () => {
         // className="max-w-[1000px] h-screen w-full m-auto pt-28 pb-16 px-4"
       >
         {/*//! IMG  */}
-        {/* <img
-            src={slides[currentIndex]}
-            className="max-w-[800px] max-h-[500px] duration-500 rounded-2xl"
-            alt={`Image n${currentIndex}`}
-          /> */}
+
         <div
           style={{ backgroundImage: `url(${slides[currentIndex]})` }}
-          // className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
-          // src={`url(${slides[currentIndex]})`}
           className=" h-full w-full rounded-2xl bg-center bg-cover duration-500"
         ></div>
         {/*//! Left arrow  */}
         <div className="absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-left-8 -left-1 text-2xl rounded-full p-2 cursor-pointer hover:scale-110 duration-300">
-          {/* <div className="sm:text-[var(--color4)]  sm:bg-transparent bg-black text-[var(--color4)] text-2xl rounded-full p-2 cursor-pointer hover:scale-110 duration-300 dark:text-orange-500"> */}
           <FaArrowCircleLeft onClick={prevSlide} />
         </div>
         {/*//! Right arrow  */}
         <div className="absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-right-8 -right-1 text-2xl rounded-full p-2 cursor-pointer hover:scale-110 duration-300">
-          {/* <div className="sm:text-[var(--color4)]  sm:bg-transparent bg-black text-[var(--color4)] text-2xl rounded-full p-2 cursor-pointer hover:scale-110 duration-300 dark:text-orange-500"> */}
           <FaArrowCircleRight onClick={nextSlide} />
         </div>
         {/*//! DOTS  */}
