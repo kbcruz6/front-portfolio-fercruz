@@ -65,6 +65,9 @@ textarea:not(:focus-within) ~ label {
   --color3:#e796a0;
   --color4:#246d82;
 }
+.swiper-button-next{ 
+  color: red;
+ }
 
 .custom-img{
   background-image:url("../src/assets/1.jpeg"), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8));

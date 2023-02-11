@@ -1,6 +1,23 @@
 import React, { useState } from "react";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import { RxDotFilled } from "react-icons/rx";
+
+//! SLIDER
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Autoplay,
+  EffectCoverflow,
+} from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/effect-coverflow";
+// import "swiper/components/effect-coverflow/effect-coverflow.scss";
+
+//! IMGS
 import fer1 from "../assets/1.jpeg";
 import fer2 from "../assets/horizontal1.jpeg";
 import fer3 from "../assets/cuadrada1.jpeg";
@@ -21,9 +38,9 @@ import fer17 from "../assets/foto10.jpeg";
 import fer18 from "../assets/foto11.jpeg";
 import fer19 from "../assets/foto12.jpeg";
 
+SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 const Gallery = () => {
   const slides = [
-    fer2,
     fer4,
     fer17,
     fer18,
@@ -60,43 +77,110 @@ const Gallery = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-full">
-      <div
-        name="gallery"
-        className="max-w-[700px] h-full w-full m-auto pt-28 pb-16 px-4 relative"
+    <div
+      name="gallery"
+      className="h-screen w-full flex justify-center items-center sm:px-28"
+    >
+      <Swiper
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          // disabledClass: "swiper-button-disabled",
+        }}
+        spaceBetween={50}
+        grabCursor={true}
+        slidesPerView={window.innerWidth < 900 ? 2 : 3}
+        centeredSlides={true}
+        effect="coverflow"
+        autoHeight={true}
+        initialSlide={1}
+        speed={500}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: true,
+        }}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        style={{ height: "400px" }}
+        className="mySwiper"
       >
-        {/*//! IMG  */}
-        <div
-          style={{ backgroundImage: `url(${slides[currentIndex]})` }}
-          className=" h-full w-full rounded-2xl bg-center bg-cover duration-500 shadow-lg shadow-black"
-        ></div>
-        {/*//! Left arrow  */}
-        <div className=" shadow-md shadow-black absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-left-8 -left-1 text-2xl rounded-full p-0 cursor-pointer hover:scale-110 duration-300">
-          <FaArrowCircleLeft onClick={prevSlide} />
-        </div>
-        {/*//! Right arrow  */}
-        <div className=" shadow-md shadow-black absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-right-8 -right-1 text-2xl rounded-full p-0 cursor-pointer hover:scale-110 duration-300">
-          <FaArrowCircleRight onClick={nextSlide} />
-        </div>
-        {/*//! DOTS  */}
-        <div className="flex top-4 justify-center py-2">
-          {slides.map((slide, slideIndex) => (
-            <div
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-              className={
-                slideIndex === currentIndex
-                  ? bigDot
-                  : "cursor-pointer text-2xl text-[var(--color4)] dark:text-orange-500 duration-300"
-              }
-            >
-              <RxDotFilled />
-            </div>
-          ))}
-        </div>
-      </div>
+        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+          <img src={slides[0]} className="w-full rounded-2xl"></img>
+        </SwiperSlide>
+        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+          {" "}
+          <img src={slides[1]} className="w-full rounded-2xl"></img>
+        </SwiperSlide>
+        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+          {" "}
+          <img src={slides[2]} className="w-full rounded-2xl"></img>
+        </SwiperSlide>
+        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+          {" "}
+          <img src={slides[3]} className="w-full rounded-2xl"></img>
+        </SwiperSlide>{" "}
+        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+          {" "}
+          <img src={slides[3]} className="w-full rounded-2xl"></img>
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 };
 
 export default Gallery;
+
+// <div className="flex flex-col justify-center items-center h-screen w-full">
+//   <div
+//     name="gallery"
+//     className="max-w-[700px] h-full w-full m-auto pt-28 pb-16 px-4 relative"
+//   >
+{
+  /*//! IMG  */
+}
+//  <div
+//  style={{ backgroundImage: `url(${slides[currentIndex]})` }}
+//  className=" h-full w-full rounded-2xl bg-center bg-cover duration-500 shadow-lg shadow-black"
+// ></div>
+{
+  /*//! Left arrow  */
+}
+{
+  /* <div className=" shadow-md shadow-black absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-left-8 -left-1 text-2xl rounded-full p-0 cursor-pointer hover:scale-110 duration-300">
+ <FaArrowCircleLeft onClick={prevSlide} />
+</div> */
+}
+{
+  /*//! Right arrow  */
+}
+{
+  /* <div className=" shadow-md shadow-black absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-right-8 -right-1 text-2xl rounded-full p-0 cursor-pointer hover:scale-110 duration-300">
+ <FaArrowCircleRight onClick={nextSlide} />
+</div> */
+}
+{
+  /*//! DOTS  */
+}
+{
+  /* <div className="flex top-4 justify-center py-2">
+ {slides.map((slide, slideIndex) => (
+   <div
+     key={slideIndex}
+     onClick={() => goToSlide(slideIndex)}
+     className={
+       slideIndex === currentIndex
+         ? bigDot
+         : "cursor-pointer text-2xl text-[var(--color4)] dark:text-orange-500 duration-300"
+     }
+   >
+     <RxDotFilled />
+   </div>
+ ))}
+</div> */
+}
+// </div>
