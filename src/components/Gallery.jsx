@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
-import { RxDotFilled } from "react-icons/rx";
 
 //! SLIDER
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,7 +13,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-coverflow";
-// import "swiper/components/effect-coverflow/effect-coverflow.scss";
 
 //! IMGS
 import fer1 from "../assets/1.jpeg";
@@ -55,28 +52,6 @@ const Gallery = () => {
     fer14,
   ];
 
-  const [bigDot, setBigDot] = useState(
-    "cursor-pointer text-2xl text-[var(--color4)] dark:text-orange-500 duration-300 scale-150"
-  );
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-    setBigDot(
-      "cursor-pointer text-2xl text-[var(--color4)] dark:text-orange-500 duration-300 scale-150"
-    );
-  };
-
   return (
     <div
       name="gallery"
@@ -87,9 +62,9 @@ const Gallery = () => {
         spaceBetween={50}
         grabCursor={true}
         slidesPerView={window.innerWidth < 900 ? 2 : 3}
-        centeredSlides={true}
         effect="coverflow"
         autoHeight={true}
+        centeredSlides={true}
         initialSlide={1}
         speed={500}
         autoplay={{
@@ -106,32 +81,32 @@ const Gallery = () => {
         style={{ height: "400px" }}
         className="mySwiper"
       >
-        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
           <img src={slides[0]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
           {" "}
           <img src={slides[1]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
           {" "}
           <img src={slides[2]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
           {" "}
           <img src={slides[3]} className="w-full rounded-2xl"></img>
         </SwiperSlide>{" "}
-        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
           {" "}
           <img src={slides[4]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
           {" "}
           <img src={slides[5]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+        <SwiperSlide className="bg-center bg-cover place-self-center max-w-[300px] max-h-[300px]">
           {" "}
-          <img src={slides[6]} className="w-full rounded-2xl"></img>
+          <img src={slides[6]} className="w-full  rounded-2xl"></img>
         </SwiperSlide>
       </Swiper>
     </div>
@@ -139,6 +114,30 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+// import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+// import { RxDotFilled } from "react-icons/rx";
+// const [bigDot, setBigDot] = useState(
+//   "cursor-pointer text-2xl text-[var(--color4)] dark:text-orange-500 duration-300 scale-150"
+// );
+
+// const [currentIndex, setCurrentIndex] = useState(0);
+// const prevSlide = () => {
+//   const isFirstSlide = currentIndex === 0;
+//   const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+//   setCurrentIndex(newIndex);
+// };
+// const nextSlide = () => {
+//   const isLastSlide = currentIndex === slides.length - 1;
+//   const newIndex = isLastSlide ? 0 : currentIndex + 1;
+//   setCurrentIndex(newIndex);
+// };
+// const goToSlide = (slideIndex) => {
+//   setCurrentIndex(slideIndex);
+//   setBigDot(
+//     "cursor-pointer text-2xl text-[var(--color4)] dark:text-orange-500 duration-300 scale-150"
+//   );
+// };
 
 // <div className="flex flex-col justify-center items-center h-screen w-full">
 //   <div
@@ -150,7 +149,7 @@ export default Gallery;
 }
 //  <div
 //  style={{ backgroundImage: `url(${slides[currentIndex]})` }}
-//  className=" h-full w-full rounded-2xl bg-center bg-cover duration-500 shadow-lg shadow-black"
+//  className=" h-full w-full rounded-2xl bg-center bg-cover place-self-center duration-500 shadow-lg shadow-black"
 // ></div>
 {
   /*//! Left arrow  */
