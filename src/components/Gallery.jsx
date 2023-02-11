@@ -8,6 +8,18 @@ import fer4 from "../assets/cuadrada2.jpeg";
 import fer5 from "../assets/cuadrada3.jpeg";
 import fer6 from "../assets/cuadrada4.jpeg";
 import fer7 from "../assets/cuadrada5.jpeg";
+import fer8 from "../assets/foto1.jpeg";
+import fer9 from "../assets/foto2.jpeg";
+import fer10 from "../assets/foto3.jpeg";
+import fer11 from "../assets/foto4.jpeg";
+import fer12 from "../assets/foto5.jpeg";
+import fer13 from "../assets/foto6.jpeg";
+import fer14 from "../assets/foto7.jpeg";
+import fer15 from "../assets/foto8.jpeg";
+import fer16 from "../assets/foto9.jpeg";
+import fer17 from "../assets/foto10.jpeg";
+import fer18 from "../assets/foto11.jpeg";
+import fer19 from "../assets/foto12.jpeg";
 
 const Gallery = () => {
   const slides = [
@@ -17,6 +29,18 @@ const Gallery = () => {
     fer5,
     fer6,
     fer7,
+    fer8,
+    fer9,
+    fer10,
+    fer11,
+    fer12,
+    fer13,
+    fer14,
+    fer15,
+    fer16,
+    fer17,
+    fer18,
+    fer19,
     // fer1,
 
     // {
