@@ -163,8 +163,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="p-4 text-4xl hover:text-gray-500">
-            <Link onClick={handleNav} to="work" smooth="true">
-              Work
+            <Link onClick={handleNav} to="categories" smooth="true">
+              Categories
             </Link>
           </li>
           <li className="p-4 text-4xl hover:text-gray-500">
