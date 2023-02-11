@@ -56,10 +56,10 @@ const Navbar = () => {
           </Link>
         </li>
 
-        {/*//! WORK  */}
+        {/*//! CATTEGORIES  */}
         <li className="relative group hover:opacity-90 px-0 mx-2">
           <Link to="work" smooth={true} duration={500}>
-            Work
+            Categories
             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
           </Link>
         </li>
