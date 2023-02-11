@@ -1,25 +1,12 @@
 import React from "react";
 import { Link } from "react-scroll";
-import reactApps from "../assets/reactApps.png";
 import cvWeb from "../assets/webCv.png";
-import pureJs from "../assets/pureJs.png";
 import nextJs from "../assets/nextJsApp.png";
 import currentPortfolio from "../assets/currentPortfolio.png";
-import weather from "../assets/weather.png";
 import weatherReact from "../assets/weatherReactDark.png";
 import { FaEye, FaGithub } from "react-icons/fa";
 import books from "../assets/books.png";
 import workout from "../assets/workout.png";
-import JavaScript from "../assets/javascript.png";
-import ReactImg from "../assets/react.png";
-import Node from "../assets/node.png";
-import Nextjs from "../assets/nextjs.png";
-import GitHub from "../assets/github.png";
-import Tailwind from "../assets/tailwind.png";
-import CSS from "../assets/css.png";
-import HTML from "../assets/html.png";
-import MySQL from "../assets/mysql.png";
-import mongoDB from "../assets/mongodb.png";
 
 const Work = () => {
   return (

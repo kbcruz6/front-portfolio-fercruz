@@ -95,7 +95,7 @@ const Contact = () => {
               />
               <label
                 for="name"
-                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color2)] text-[var(--color4)] font-bold dark:bg-black dark:text-orange-500"
+                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color2)] text-[var(--color4)] font-bold dark:bg-slate-800 dark:text-orange-500"
               >
                 Name
               </label>
@@ -115,7 +115,7 @@ const Contact = () => {
               />
               <label
                 for="email"
-                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color2)] text-[var(--color4)] font-bold dark:bg-black dark:text-orange-500"
+                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color2)] text-[var(--color4)] font-bold dark:bg-slate-800 dark:text-orange-500"
               >
                 Email
               </label>
@@ -135,7 +135,7 @@ const Contact = () => {
               />
               <label
                 for="message"
-                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color2)] text-[var(--color4)] font-bold dark:bg-black dark:text-orange-500"
+                className="absolute top-0 rounded-3xl text-md p-4 -z-10 duration-300 origin-0 bg-[var(--color2)] text-[var(--color4)] font-bold dark:bg-slate-800 dark:text-orange-500"
               >
                 Message
               </label>

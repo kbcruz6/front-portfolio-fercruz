@@ -66,7 +66,6 @@ textarea:not(:focus-within) ~ label {
   --color4:#246d82;
 }
 
-
 .custom-img{
   background-image:url("../src/assets/1.jpeg"), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8));
   background-blend-mode: overlay;

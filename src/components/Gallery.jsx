@@ -64,20 +64,18 @@ const Gallery = () => {
       <div
         name="gallery"
         className="max-w-[700px] h-full w-full m-auto pt-28 pb-16 px-4 relative"
-        // className="max-w-[1000px] h-screen w-full m-auto pt-28 pb-16 px-4"
       >
         {/*//! IMG  */}
-
         <div
           style={{ backgroundImage: `url(${slides[currentIndex]})` }}
-          className=" h-full w-full rounded-2xl bg-center bg-cover duration-500"
+          className=" h-full w-full rounded-2xl bg-center bg-cover duration-500 shadow-lg shadow-black"
         ></div>
         {/*//! Left arrow  */}
-        <div className="absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-left-8 -left-1 text-2xl rounded-full p-2 cursor-pointer hover:scale-110 duration-300">
+        <div className=" shadow-md shadow-black absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-left-8 -left-1 text-2xl rounded-full p-0 cursor-pointer hover:scale-110 duration-300">
           <FaArrowCircleLeft onClick={prevSlide} />
         </div>
         {/*//! Right arrow  */}
-        <div className="absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-right-8 -right-1 text-2xl rounded-full p-2 cursor-pointer hover:scale-110 duration-300">
+        <div className=" shadow-md shadow-black absolute top-[50%] sm:text-[var(--color4)] dark:text-orange-500 sm:bg-transparent bg-black text-[var(--color4)]  sm:-right-8 -right-1 text-2xl rounded-full p-0 cursor-pointer hover:scale-110 duration-300">
           <FaArrowCircleRight onClick={nextSlide} />
         </div>
         {/*//! DOTS  */}
