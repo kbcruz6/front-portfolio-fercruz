@@ -2,24 +2,34 @@ import React, { useState } from "react";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import { RxDotFilled } from "react-icons/rx";
 import fer1 from "../assets/1.jpeg";
+import fer2 from "../assets/horizontal1.jpeg";
+import fer3 from "../assets/cuadrada1.jpeg";
+import fer4 from "../assets/cuadrada2.jpeg";
+import fer5 from "../assets/cuadrada3.jpeg";
+import fer6 from "../assets/cuadrada4.jpeg";
+import fer7 from "../assets/cuadrada5.jpeg";
 
 const Gallery = () => {
   const slides = [
+    fer1,
+    fer2,
+    fer3,
+    fer4,
+    fer5,
+    fer6,
+    fer7,
     // {
-    //   url: "../assets/1.jpeg",
+    //   url: "https://images.unsplash.com/photo-1469362102473-8622cfb973cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2419&q=80",
     // },
-    {
-      url: "https://images.unsplash.com/photo-1469362102473-8622cfb973cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2419&q=80",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1594717527389-a590b56e8d0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1484591974057-265bb767ef71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1545917992-dea2d782ef46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2489&q=80",
-    },
+    // {
+    //   url: "https://images.unsplash.com/photo-1594717527389-a590b56e8d0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    // },
+    // {
+    //   url: "https://images.unsplash.com/photo-1484591974057-265bb767ef71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    // },
+    // {
+    //   url: "https://images.unsplash.com/photo-1545917992-dea2d782ef46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2489&q=80",
+    // },
   ];
 
   const [bigDot, setBigDot] = useState(
@@ -50,7 +60,8 @@ const Gallery = () => {
       className="max-w-[1000px] h-screen w-full m-auto pt-28 pb-16 px-4 relative"
     >
       <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+        style={{ backgroundImage: `url(${slides[currentIndex]})` }}
+        // style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
       ></div>
       {/*//! Left arrow  */}

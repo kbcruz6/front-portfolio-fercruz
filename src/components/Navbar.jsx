@@ -101,7 +101,7 @@ const Navbar = () => {
             className={
               checked
                 ? "switch-label flex items-center bg-[var(--color2)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
-                : "switch-label flex items-center bg-slate-300 dark:bg-orange-500 w-[45px] h-[25px] rounded-full relative cursor-pointer"
+                : "switch-label flex items-center bg-slate-300 dark:bg-[var(--color3)] w-[45px] h-[25px] rounded-full relative cursor-pointer"
             }
             htmlFor="switch"
           >
@@ -115,7 +115,7 @@ const Navbar = () => {
           </label>
         </li>
       </ul>
-      {/*//! TOGGLE SWITCH  */}
+      {/*//! TOGGLE SWITCH MOBILE */}
       <div className="sm:hidden relative group hover:opacity-90 px-0 mx-2">
         <input
           onChange={onToggle}
@@ -128,7 +128,7 @@ const Navbar = () => {
           className={
             checked
               ? "switch-label flex items-center bg-[var(--color2)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
-              : "switch-label flex items-center bg-slate-300 dark:bg-orange-500 w-[45px] h-[25px] rounded-full relative cursor-pointer"
+              : "switch-label flex items-center bg-slate-300 dark:bg-[var(--color3)] w-[45px] h-[25px] rounded-full relative cursor-pointer"
           }
           htmlFor="switch"
         >
