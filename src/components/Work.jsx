@@ -15,7 +15,7 @@ const Work = () => {
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full duration-300">
         <div className="pb-6">
           <p className="text-4xl font-bold inline border-b-4 border-[var(--color4)] text-[var(--color1)] dark:text-orange-200 dark:border-orange-500">
-            My versatility
+            My versatility sorted
           </p>
         </div>
         {/*//! Card grid container */}
