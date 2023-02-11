@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 
-//! COMPONENTS
-import Navbar from "./components/Navbar.jsx";
-import Home from "./components/Home.jsx";
-import About from "./components/About.jsx";
-import Skills from "./components/Skills.jsx";
-import Work from "./components/Work.jsx";
-import Contact from "./components/Contact.jsx";
-import SocialMediaBottom from "./components/SocialMediaBottom.jsx";
+//! ROUTES & COMPONENTS
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage.jsx";
+import Muralism from "./pages/Muralism";
+import Tattoo from "./pages/Tattoo";
+import WaterColors from "./pages/WaterColors";
+import Portraits from "./pages/Portraits";
 
 //! CONTEXT
 import { ThemeContext } from "./context/ThemeContext";
@@ -15,7 +14,6 @@ import { ThemeContext } from "./context/ThemeContext";
 //! AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Gallery from "./components/Gallery.jsx";
 AOS.init();
 
 function App() {
@@ -27,17 +25,15 @@ function App() {
 
   return (
     <div className={isDarkTheme ? "dark" : ""}>
-      <div className="dark:bg-slate-800 bg-[var(--color2)] duration-300">
-        {/* <div className="bg-[var(--color2)] dark:bg-transparent"> */}
-        <Navbar />
-        <Home />
-        <Gallery />
-        <Work />
-        <About />
-        {/* <Skills /> */}
-        <Contact />
-        <SocialMediaBottom />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/muralism" element={<Muralism />} />
+          <Route path="/tattoo" element={<Tattoo />} />
+          <Route path="/watercolors" element={<WaterColors />} />
+          <Route path="/portraits" element={<Portraits />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
