@@ -125,7 +125,7 @@ const Gallery = () => {
         </SwiperSlide>
         <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]">
           {" "}
-          <img src={slides[6]} className="w-full  rounded-2xl"></img>
+          <img src={slides[6]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
       </Swiper>
     </div>
