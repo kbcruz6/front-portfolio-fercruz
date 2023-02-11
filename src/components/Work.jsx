@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-scroll";
-import weatherReact from "../assets/weatherReactDark.png";
 import muralism from "../assets/horizontal1.jpeg";
 import tattoo from "../assets/foto2.jpeg";
 import waterColors from "../assets/acuarelas/ave.jpeg";

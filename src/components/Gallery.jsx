@@ -42,12 +42,13 @@ SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 const Gallery = () => {
   const slides = [
     fer4,
-    fer17,
-    fer18,
+    fer1,
     fer6,
     fer7,
-    fer16,
+    fer17,
+    fer18,
     fer10,
+    fer16,
     fer11,
     fer12,
     fer3,
@@ -122,7 +123,15 @@ const Gallery = () => {
         </SwiperSlide>{" "}
         <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
           {" "}
-          <img src={slides[3]} className="w-full rounded-2xl"></img>
+          <img src={slides[4]} className="w-full rounded-2xl"></img>
+        </SwiperSlide>
+        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+          {" "}
+          <img src={slides[5]} className="w-full rounded-2xl"></img>
+        </SwiperSlide>
+        <SwiperSlide className="bg-center bg-cover max-w-[300px] max-h-[300px]">
+          {" "}
+          <img src={slides[6]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
       </Swiper>
     </div>
