@@ -32,7 +32,7 @@ const Categories = () => {
                 <Link to="/muralism" target={"_blank"}>
                   <div
                     style={{ backgroundImage: `url(${muralism})` }}
-                    className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[150px] sm:h-[300px]"
+                    className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[180px] sm:h-[300px]"
                   ></div>{" "}
                   <div className="font-bold text-xl my-2 flex justify-center items-center">
                     Muralism{" "}
@@ -47,13 +47,15 @@ const Categories = () => {
               data-aos-delay="200"
             >
               <div className="max-w-sm hover:scale-110  rounded-3xl shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-[var(--color3)] hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
-                <div
-                  style={{ backgroundImage: `url(${tattoo})` }}
-                  className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[150px] sm:h-[300px]"
-                ></div>{" "}
-                <div className="font-bold text-xl my-2 flex justify-center items-center">
-                  Tattoo{" "}
-                </div>
+                <Link to="/tattoo" target={"_blank"}>
+                  <div
+                    style={{ backgroundImage: `url(${tattoo})` }}
+                    className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[180px] sm:h-[300px]"
+                  ></div>{" "}
+                  <div className="font-bold text-xl my-2 flex justify-center items-center">
+                    Tattoo{" "}
+                  </div>
+                </Link>
               </div>
             </div>
             {/*//! WATERCOLOR*/}
@@ -63,13 +65,15 @@ const Categories = () => {
               data-aos-delay="300"
             >
               <div className="max-w-sm hover:scale-110  rounded-3xl shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-[var(--color3)] hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
-                <div
-                  style={{ backgroundImage: `url(${waterColors})` }}
-                  className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[150px] sm:h-[300px]"
-                ></div>
-                <div className="font-bold text-xl my-2 flex justify-center items-center">
-                  Watercolor
-                </div>
+                <Link to="/watercolor" target={"_blank"}>
+                  <div
+                    style={{ backgroundImage: `url(${waterColors})` }}
+                    className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[180px] sm:h-[300px]"
+                  ></div>
+                  <div className="font-bold text-xl my-2 flex justify-center items-center">
+                    Watercolor
+                  </div>
+                </Link>
               </div>
             </div>
             {/*//! PORTRAIT*/}
@@ -79,13 +83,15 @@ const Categories = () => {
               data-aos-delay="300"
             >
               <div className="max-w-sm hover:scale-110  rounded-3xl shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-[var(--color3)] hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
-                <div
-                  style={{ backgroundImage: `url(${portraits})` }}
-                  className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[150px] sm:h-[300px]"
-                ></div>
-                <div className="font-bold text-xl my-2 flex justify-center items-center">
-                  Portrait
-                </div>
+                <Link to="/portrait" target={"_blank"}>
+                  <div
+                    style={{ backgroundImage: `url(${portraits})` }}
+                    className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[180px] sm:h-[300px]"
+                  ></div>
+                  <div className="font-bold text-xl my-2 flex justify-center items-center">
+                    Portrait
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -109,7 +115,7 @@ export default Categories;
 }
 //     {/*//! MURALISM
 //     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-//       <div className="bg-center bg-cover place-self-center max-w-sm  max-h-[150px] sm:h-[300px] shadow-lg shadow-black rounded-3xl p-3 hover:scale-110 duration-300">
+//       <div className="bg-center bg-cover place-self-center max-w-sm  max-h-[180px] sm:h-[300px] shadow-lg shadow-black rounded-3xl p-3 hover:scale-110 duration-300">
 //         <Link target={"_blank"} to="/muralism">
 //           <img
 //             src={slides[0]}
@@ -121,7 +127,7 @@ export default Categories;
 //     </div>
 //     {/*//! TATTOO
 //     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-//       <div className="bg-center bg-cover place-self-center max-w-sm max-h-[150px] sm:h-[300px]  shadow-lg shadow-black rounded-3xl p-3  hover:scale-110 duration-300">
+//       <div className="bg-center bg-cover place-self-center max-w-sm max-h-[180px] sm:h-[300px]  shadow-lg shadow-black rounded-3xl p-3  hover:scale-110 duration-300">
 //         {" "}
 //         <Link target={"_blank"} to="/tattoo">
 //           <img
@@ -134,7 +140,7 @@ export default Categories;
 //     </div>
 //     {/* //! WATERCOLOR
 //     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-//       <div className="bg-center bg-cover place-self-center max-w-sm max-h-[150px] sm:h-[300px]  shadow-lg shadow-black rounded-3xl p-3 hover:scale-110 duration-300">
+//       <div className="bg-center bg-cover place-self-center max-w-sm max-h-[180px] sm:h-[300px]  shadow-lg shadow-black rounded-3xl p-3 hover:scale-110 duration-300">
 //         {" "}
 //         <Link target={"_blank"} to="/watercolor">
 //           <img
@@ -149,7 +155,7 @@ export default Categories;
 //     </div>
 //     //! PORTRAIT
 //     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-//       <div className="bg-center bg-cover place-self-center max-w-sm max-h-[150px] sm:h-[300px]  shadow-lg shadow-black rounded-3xl p-3 hover:scale-110 duration-300">
+//       <div className="bg-center bg-cover place-self-center max-w-sm max-h-[180px] sm:h-[300px]  shadow-lg shadow-black rounded-3xl p-3 hover:scale-110 duration-300">
 //         {" "}
 //         <Link target={"_blank"} to="/portrait">
 //           <img
