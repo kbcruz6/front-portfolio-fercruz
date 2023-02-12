@@ -22,10 +22,11 @@ import fer6 from "../assets/cuadrada4.jpeg";
 import fer7 from "../assets/cuadrada5.jpeg";
 import fer17 from "../assets/foto10.jpeg";
 import fer18 from "../assets/foto11.jpeg";
+import fer2 from "../assets/foto3.jpeg";
 
 SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 const Gallery = () => {
-  const slides = [fer4, fer1, fer6, fer7, fer17, fer18];
+  const slides = [fer4, fer1, fer6, fer7, fer17, fer18, fer2];
 
   return (
     <div
@@ -58,7 +59,7 @@ const Gallery = () => {
         zoom={true}
         speed={500}
         autoplay={{
-          delay: 2000,
+          delay: 1300,
           disableOnInteraction: true,
         }}
         coverflowEffect={{
