@@ -15,7 +15,7 @@ const Categories = () => {
       >
         <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full duration-300">
           <div className="pb-6 text-center">
-            <p className="text-4xl font-bold inline border-b-4 border-slate-300 text-blue-400 dark:text-white dark:border-orange-500">
+            <p className="text-4xl font-bold inline border-b-4 border-[var(--color4)] text-[var(--color3)] dark:text-white dark:border-orange-500">
               Categories
             </p>
           </div>
@@ -28,7 +28,7 @@ const Categories = () => {
               data-aos-duration="1000"
               data-aos-delay="100"
             >
-              <div className="max-w-sm rounded-3xl hover:scale-110 shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-blue-500 hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
+              <div className="max-w-sm rounded-3xl hover:scale-110 shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-[var(--color3)] hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
                 <Link to="/muralism" target={"_blank"}>
                   <div
                     style={{ backgroundImage: `url(${muralism})` }}
@@ -46,7 +46,7 @@ const Categories = () => {
               data-aos-duration="1000"
               data-aos-delay="200"
             >
-              <div className="max-w-sm hover:scale-110  rounded-3xl shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-blue-500 hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
+              <div className="max-w-sm hover:scale-110  rounded-3xl shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-[var(--color3)] hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
                 <div
                   style={{ backgroundImage: `url(${tattoo})` }}
                   className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[150px] sm:h-[300px]"
@@ -62,7 +62,7 @@ const Categories = () => {
               data-aos-duration="1000"
               data-aos-delay="300"
             >
-              <div className="max-w-sm hover:scale-110  rounded-3xl shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-blue-500 hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
+              <div className="max-w-sm hover:scale-110  rounded-3xl shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-[var(--color3)] hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
                 <div
                   style={{ backgroundImage: `url(${waterColors})` }}
                   className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[150px] sm:h-[300px]"
@@ -78,7 +78,7 @@ const Categories = () => {
               data-aos-duration="1000"
               data-aos-delay="300"
             >
-              <div className="max-w-sm hover:scale-110  rounded-3xl shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-blue-500 hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
+              <div className="max-w-sm hover:scale-110  rounded-3xl shadow-lg shadow-slate-500 dark:shadow-[#040c16] p-2 bg-slate-200 text-[var(--color3)] hover:bg-slate-300/90 dark:text-orange-200 dark:bg-[#11294e]/50 dark:hover:bg-[#11294e]/90 duration-300">
                 <div
                   style={{ backgroundImage: `url(${portraits})` }}
                   className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[150px] sm:h-[300px]"
