@@ -39,6 +39,12 @@ textarea:not(:focus-within) ~ label {
   background-position: center;
   height: 150px;
 }
+.content-div2{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
 
 .switch-checkbox:checked + .switch-label .switch-button{
 

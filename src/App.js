@@ -5,8 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import Muralism from "./pages/Muralism";
 import Tattoo from "./pages/Tattoo";
-import WaterColors from "./pages/WaterColors";
-import Portraits from "./pages/Portraits";
+import WaterColor from "./pages/WaterColor";
+import Portrait from "./pages/Portrait";
 
 //! CONTEXT
 import { ThemeContext } from "./context/ThemeContext";
@@ -30,8 +30,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/muralism" element={<Muralism />} />
           <Route path="/tattoo" element={<Tattoo />} />
-          <Route path="/watercolors" element={<WaterColors />} />
-          <Route path="/portraits" element={<Portraits />} />
+          <Route path="/watercolor" element={<WaterColor />} />
+          <Route path="/portrait" element={<Portrait />} />
         </Routes>
       </BrowserRouter>
     </div>

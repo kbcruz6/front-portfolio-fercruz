@@ -6,12 +6,12 @@ const About = () => {
     <div className="bg-[var(--color2)] dark:bg-transparent">
       <div
         name="about"
-        className="w-full h-screen text-[var(--color4)] duration-300 sm:rounded-bl-full rounded-tr-[8000px] shadow-lg shadow-[var(--color3)] bg-[var(--color1)] dark:shadow-none dark:bg-transparent dark:text-orange-200"
+        className="w-full h-screen text-[var(--color4)] duration-300 sm:rounded-bl-full rounded-tr-[8000px] shadow-lg shadow-[var(--color3)] bg-[var(--color1)] dark:shadow-none dark:bg-transparent dark:text-white"
       >
         <div className="flex flex-col justify-center items-center w-full h-full">
           <div className="max-w-[1000px] w-full px-4 ">
             <div className="sm:text-center pb-8 ">
-              <p className="text-4xl font-bold inline text-[var(--color3)] border-b-4 border-[var(--color4)] dark:text-orange-200 dark:border-orange-500">
+              <p className="text-4xl font-bold inline text-[var(--color3)] border-b-4 border-[var(--color4)] dark:text-white dark:border-orange-500">
                 About me 👩🏻‍🎨
               </p>
             </div>
