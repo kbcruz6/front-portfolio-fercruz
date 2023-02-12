@@ -1,7 +1,7 @@
 import React from "react";
 
 const Tattoo = () => {
-  return <div>Tattoo</div>;
+  return <div>Tattoo - Work in progress...</div>;
 };
 
 export default Tattoo;
