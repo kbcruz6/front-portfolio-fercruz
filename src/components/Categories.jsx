@@ -1,8 +1,8 @@
 import React from "react";
-import muralism from "../assets/horizontal1.jpeg";
-import tattoo from "../assets/foto2.jpeg";
-import waterColors from "../assets/acuarelas/ave.jpeg";
-import portraits from "../assets/foto4.jpeg";
+import muralism from "../assets/muralism/horizontal1.jpeg";
+import tattoo from "../assets/tattoo/foto2.jpeg";
+import waterColors from "../assets/watercolor/ave1.jpeg";
+import portraits from "../assets/portrait/foto4.jpeg";
 import { Link } from "react-router-dom";
 
 const slides = [muralism, tattoo, waterColors, portraits];

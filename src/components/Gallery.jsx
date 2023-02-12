@@ -16,13 +16,13 @@ import "swiper/css/effect-coverflow";
 import "../../src/index.css";
 
 //! IMGS
-import fer1 from "../assets/1.jpeg";
-import fer4 from "../assets/cuadrada2.jpeg";
-import fer6 from "../assets/cuadrada4.jpeg";
-import fer7 from "../assets/cuadrada5.jpeg";
-import fer17 from "../assets/foto10.jpeg";
-import fer18 from "../assets/foto11.jpeg";
-import fer2 from "../assets/foto3.jpeg";
+import fer1 from "../assets/muralism/1.jpeg";
+import fer4 from "../assets/muralism/cuadrada2.jpeg";
+import fer6 from "../assets/tattoo/cuadrada4.jpeg";
+import fer7 from "../assets/tattoo/cuadrada5.jpeg";
+import fer17 from "../assets/portrait/foto10.jpeg";
+import fer18 from "../assets/portrait/foto11.jpeg";
+import fer2 from "../assets/portrait/foto3.jpeg";
 
 SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 const Gallery = () => {
@@ -59,7 +59,7 @@ const Gallery = () => {
         zoom={true}
         speed={500}
         autoplay={{
-          delay: 1300,
+          delay: 1500,
           disableOnInteraction: true,
         }}
         coverflowEffect={{
