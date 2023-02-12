@@ -79,7 +79,7 @@ textarea:not(:focus-within) ~ label {
  } */
 
 .custom-img{
-  background-image:url("../src/assets/muralism/1.jpeg"), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8));
+  background-image:url("../src/assets/muralism/m-gorila-fer.jpeg"), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8));
   background-blend-mode: overlay;
 }
 /* .custom-img::before{

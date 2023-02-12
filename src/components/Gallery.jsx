@@ -16,17 +16,17 @@ import "swiper/css/effect-coverflow";
 import "../../src/index.css";
 
 //! IMGS
-import fer1 from "../assets/muralism/1.jpeg";
-import fer4 from "../assets/muralism/cuadrada2.jpeg";
-import fer6 from "../assets/tattoo/cuadrada4.jpeg";
-import fer7 from "../assets/tattoo/cuadrada5.jpeg";
-import fer17 from "../assets/portrait/foto10.jpeg";
-import fer18 from "../assets/portrait/foto11.jpeg";
-import fer2 from "../assets/portrait/foto3.jpeg";
+import gorilaFer from "../assets/muralism/m-gorila-fer.jpeg";
+import zorro from "../assets/muralism/m-zorro.jpeg";
+import tigre from "../assets/tattoo/t-tigre.jpeg";
+import escorpion from "../assets/tattoo/t-escorpion.jpeg";
+import hipocampo from "../assets/portrait/p-hipocampo.jpeg";
+import hojas from "../assets/portrait/p-hojas.jpeg";
+import perro1 from "../assets/portrait/p-perro1.jpeg";
 
 SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 const Gallery = () => {
-  const slides = [fer4, fer1, fer6, fer7, fer17, fer18, fer2];
+  const slides = [zorro, gorilaFer, tigre, escorpion, hipocampo, hojas, perro1];
 
   return (
     <div
