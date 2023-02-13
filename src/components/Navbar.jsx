@@ -7,6 +7,9 @@ import { Link as LinkPages, useLocation } from "react-router-dom";
 import "../index.css";
 import { ThemeContext } from "../context/ThemeContext";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const Navbar = () => {
   const { checked, onToggle } = useContext(ThemeContext);
@@ -14,7 +17,9 @@ const Navbar = () => {
   const [color, setColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
   const location = useLocation();
-
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
   const handleNav = () => {
     setNav(!nav);
   };
@@ -78,14 +83,90 @@ const Navbar = () => {
       ) : (
         <ul
           style={{ color: `${textColor}` }}
-          className="font-bold hidden lg:flex sm:text-xl "
+          className="font-bold hidden lg:flex sm:text-xl justify-center items-center"
         >
-          <li>
-            <LinkPages to="/">
-              Home
-              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
-            </LinkPages>
+          <li className="">
+            <LinkPages to="/">Home</LinkPages>
           </li>
+          {/*//* DROPDOWN WITH CATEGORIES  */}
+          <Menu as="div" className="relative inline-block text-left">
+            <div>
+              <Menu.Button className="inline-flex w-full justify-center px-4 py-2 text-white focus:outline-none">
+                Categories
+                <ChevronDownIcon
+                  className="-mr-1 ml-2 h-5 w-5"
+                  aria-hidden="true"
+                />
+              </Menu.Button>
+            </div>
+
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-100"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <Menu.Items className="absolute right-0 z-10 mt-0 w-40 text-white origin-top-right rounded-md bg-slate-800 focus:outline-none">
+                <div className="py-1">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <LinkPages
+                        to="/muralism"
+                        className={classNames(
+                          active ? "bg-gray-100 text-gray-900" : "text-white",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        Muralism
+                      </LinkPages>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <LinkPages
+                        to="/tattoo"
+                        className={classNames(
+                          active ? "bg-gray-100 text-gray-900" : "text-white",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        Tattoo
+                      </LinkPages>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <LinkPages
+                        to="/watercolor"
+                        className={classNames(
+                          active ? "bg-gray-100 text-gray-900" : "text-white",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        Watercolor
+                      </LinkPages>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <LinkPages
+                        to="/portrait"
+                        className={classNames(
+                          active ? "bg-gray-100 text-gray-900" : "text-white",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        Portrait
+                      </LinkPages>
+                    )}
+                  </Menu.Item>
+                </div>
+              </Menu.Items>
+            </Transition>
+          </Menu>
         </ul>
       )}
       {/*//! TOGGLE SWITCH  */}
