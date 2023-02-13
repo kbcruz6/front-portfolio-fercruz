@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 //! SLIDER
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -47,7 +47,7 @@ const Gallery = () => {
           },
           // when window width is >= 768px
           1244: {
-            width: 768,
+            // width: 768,
             // height: 500,
             // slidesPerView: 3,
           },
