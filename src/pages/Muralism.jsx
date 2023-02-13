@@ -12,6 +12,7 @@ import muralism6 from "../assets/muralism/m-zorro.jpeg";
 import muralism7 from "../assets/muralism/m-atardecer.jpeg";
 import muralism8 from "../assets/muralism/m-flores-fer.jpeg";
 import muralism9 from "../assets/muralism/m-gorila.jpeg";
+import Footer from "../components/Footer";
 
 const Muralism = () => {
   const data = [
@@ -33,7 +34,7 @@ const Muralism = () => {
   return (
     <div
       name="home"
-      className="dark:bg-black bg-[var(--color2)] h-full w-full flex-row pt-20"
+      className="dark:bg-gray-900 bg-[var(--color2)] h-full w-full flex-row pt-20"
     >
       <Navbar />
       <SocialMediaBottom />
@@ -67,6 +68,7 @@ const Muralism = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

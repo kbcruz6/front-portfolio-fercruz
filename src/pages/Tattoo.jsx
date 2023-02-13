@@ -12,6 +12,7 @@ import tattoo6 from "../assets/tattoo/t-perro3.jpeg";
 import tattoo7 from "../assets/tattoo/t-tigre.jpeg";
 import tattoo8 from "../assets/tattoo/t-escorpion.jpeg";
 import tattoo9 from "../assets/tattoo/t-ballena.jpeg";
+import Footer from "../components/Footer";
 
 const Tattoo = () => {
   const data = [
@@ -33,7 +34,7 @@ const Tattoo = () => {
   return (
     <div
       name="home"
-      className="dark:bg-black bg-[var(--color2)] h-full w-full flex-row pt-20"
+      className="dark:bg-slate-900 bg-[var(--color2)] h-full w-full flex-row pt-20"
     >
       <Navbar />
       <SocialMediaBottom />
@@ -68,6 +69,7 @@ const Tattoo = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

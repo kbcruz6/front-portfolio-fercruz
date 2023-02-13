@@ -33,6 +33,7 @@ import watercolor26 from "../assets/watercolor/w-ave-26.jpeg";
 import watercolor27 from "../assets/watercolor/w-ave-27.jpeg";
 import watercolor28 from "../assets/watercolor/w-ave-28.jpeg";
 import watercolor29 from "../assets/watercolor/w-ave-29.jpeg";
+import Footer from "../components/Footer";
 
 const WaterColor = () => {
   const data = [
@@ -76,7 +77,7 @@ const WaterColor = () => {
   return (
     <div
       name="home"
-      className="dark:bg-black bg-[var(--color2)] h-full w-full flex-row pt-20"
+      className="dark:bg-slate-900 bg-[var(--color2)] h-full w-full flex-row pt-20"
     >
       <Navbar />
       <SocialMediaBottom />
@@ -111,6 +112,7 @@ const WaterColor = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

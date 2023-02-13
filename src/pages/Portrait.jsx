@@ -12,6 +12,7 @@ import portrait6 from "../assets/portrait/p-hipocampo.jpeg";
 import portrait7 from "../assets/portrait/p-hojas.jpeg";
 import portrait8 from "../assets/portrait/p-perro2.jpeg";
 import portrait9 from "../assets/portrait/p-perro1.jpeg";
+import Footer from "../components/Footer";
 
 const Portrait = () => {
   const data = [
@@ -33,7 +34,7 @@ const Portrait = () => {
   return (
     <div
       name="home"
-      className="dark:bg-black bg-[var(--color2)] h-full w-full flex-row pt-20"
+      className="dark:bg-slate-900 bg-[var(--color2)] h-full w-full flex-row pt-20"
     >
       <Navbar />
       <SocialMediaBottom />
@@ -67,6 +68,7 @@ const Portrait = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
