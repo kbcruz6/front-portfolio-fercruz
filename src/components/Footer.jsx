@@ -7,7 +7,7 @@ const Footer = () => {
       <div>
         Created by{" "}
         <a
-          className="dark:hover:text-orange-500 hover:text-[var(--color4)] duration-300"
+          className="dark:hover:text-orange-500 hover:text-[var(--color4)] duration-300 font-bold"
           href="https://portfolio-agustincruz.vercel.app/"
           target="_blank"
         >
