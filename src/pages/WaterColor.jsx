@@ -67,9 +67,10 @@ const WaterColor = () => {
     watercolor28,
     watercolor29,
   ];
-
   useEffect(() => {
+    // setTimeout(() => {
     window.scrollTo(0, 0);
+    // }, 500);
   }, []);
 
   return (

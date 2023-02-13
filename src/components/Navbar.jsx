@@ -1,11 +1,5 @@
 //! REACT, NAVIGATION, CONTEXT, THEME
-import React, {
-  useEffect,
-  useState,
-  useContext,
-  Fragment,
-  useRef,
-} from "react";
+import React, { useEffect, useState, useContext, Fragment } from "react";
 import { Link as LinkPages, useLocation } from "react-router-dom";
 import { Link } from "react-scroll";
 import "../index.css";
@@ -17,7 +11,7 @@ import { BsWhatsapp, BsInstagram } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 //! DROPDOWN
-import { Menu, Transition, Popover } from "@headlessui/react";
+import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const Navbar = () => {
@@ -82,13 +76,14 @@ const Navbar = () => {
           {/*//! CATTEGORIES  */}
           <li className="relative group px-0 mx-2">
             {/*//* DROPDOWN WITH CATEGORIES  */}
-            <Link to="categories" smooth="true" duration={500}>
-              <Menu
-                onMouseEnter={() => setIsShowing(true)}
-                onMouseLeave={() => setIsShowing(false)}
-                as="div"
-                className="relative group inline-block text-left"
-              >
+
+            <Menu
+              onMouseEnter={() => setIsShowing(true)}
+              onMouseLeave={() => setIsShowing(false)}
+              as="div"
+              className="relative group inline-block text-left"
+            >
+              <Link to="categories" smooth="true" duration={300}>
                 <Menu.Button className=" inline-flex w-full justify-center text-white focus:outline-none">
                   Categories
                   <ChevronDownIcon
@@ -96,86 +91,77 @@ const Navbar = () => {
                     aria-hidden="true"
                   />
                 </Menu.Button>
-                <Transition
-                  show={isShowing}
-                  onMouseEnter={() => setIsShowing(true)}
-                  onMouseLeave={() => setIsShowing(false)}
-                  className="absolute group-hover:block"
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
-                >
-                  <Menu.Items className="absolute group-hover:block right-0 z-10 mt-0 w-36 text-white origin-top-right rounded-md bg-[var(--color3)] dark:bg-black focus:outline-none">
-                    <div className="py-1">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <LinkPages
-                            to="/muralism"
-                            className={classNames(
-                              active
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-white",
-                              "block px-4 py-2 text-sm"
-                            )}
-                          >
-                            Muralism
-                          </LinkPages>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <LinkPages
-                            to="/tattoo"
-                            className={classNames(
-                              active
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-white",
-                              "block px-4 py-2 text-sm"
-                            )}
-                          >
-                            Tattoo
-                          </LinkPages>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <LinkPages
-                            to="/watercolor"
-                            className={classNames(
-                              active
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-white",
-                              "block px-4 py-2 text-sm"
-                            )}
-                          >
-                            Watercolor
-                          </LinkPages>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <LinkPages
-                            to="/portrait"
-                            className={classNames(
-                              active
-                                ? "bg-gray-100 text-gray-900"
-                                : "text-white",
-                              "block px-4 py-2 text-sm"
-                            )}
-                          >
-                            Portrait
-                          </LinkPages>
-                        )}
-                      </Menu.Item>
-                    </div>
-                  </Menu.Items>
-                </Transition>
-              </Menu>
-            </Link>
+              </Link>
+              <Transition
+                show={isShowing}
+                // onMouseHover={() => setIsShowing(true)}
+                // onMouseLeave={() => setIsShowing(false)}
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute group-hover:block right-0 z-10 mt-0 w-36 text-white origin-top-right rounded-md bg-[var(--color3)] dark:bg-black focus:outline-none">
+                  <div className="py-1">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <LinkPages
+                          to="/muralism"
+                          className={classNames(
+                            active ? "bg-gray-100 text-gray-900" : "text-white",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          Muralism
+                        </LinkPages>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <LinkPages
+                          to="/tattoo"
+                          className={classNames(
+                            active ? "bg-gray-100 text-gray-900" : "text-white",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          Tattoo
+                        </LinkPages>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <LinkPages
+                          to="/watercolor"
+                          className={classNames(
+                            active ? "bg-gray-100 text-gray-900" : "text-white",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          Watercolor
+                        </LinkPages>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <LinkPages
+                          to="/portrait"
+                          className={classNames(
+                            active ? "bg-gray-100 text-gray-900" : "text-white",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          Portrait
+                        </LinkPages>
+                      )}
+                    </Menu.Item>
+                  </div>
+                </Menu.Items>
+              </Transition>
+            </Menu>
 
             {/*//*-------------------------------------------------------------------------------  */}
           </li>
@@ -197,7 +183,11 @@ const Navbar = () => {
             <LinkPages to="/">Home</LinkPages>
           </li>
           {/*//* DROPDOWN WITH CATEGORIES  */}
-          <Menu as="div" className="relative inline-block text-left">
+          <Menu
+            onMouseEnter={() => setIsShowing(true)}
+            as="div"
+            className="relative inline-block text-left"
+          >
             <div>
               <Menu.Button className="inline-flex w-full justify-center px-4 py-2 text-white focus:outline-none">
                 Categories
@@ -209,6 +199,9 @@ const Navbar = () => {
             </div>
 
             <Transition
+              show={isShowing}
+              onMouseEnter={() => setIsShowing(true)}
+              onMouseLeave={() => setIsShowing(false)}
               as={Fragment}
               enter="transition ease-out duration-100"
               enterFrom="transform opacity-0 scale-95"
@@ -217,7 +210,7 @@ const Navbar = () => {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 z-10 mt-0 w-40 text-white origin-top-right rounded-md bg-[var(--color3)] dark:bg-slate-800 focus:outline-none">
+              <Menu.Items className="absolute right-0 z-10 mt-0 w-40 text-white origin-top-right rounded-md bg-[var(--color3)] dark:bg-black focus:outline-none">
                 <div className="py-1">
                   <Menu.Item>
                     {({ active }) => (
@@ -373,7 +366,7 @@ const Navbar = () => {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
               >
-                <Menu.Items className="absolute right-0 z-10 mt-0 w-56 text-white text-center origin-top-right rounded-md bg-slate-800 focus:outline-none">
+                <Menu.Items className="absolute right-0 z-10 mt-0 w-56 text-white text-center origin-top-right rounded-md bg-slate-900 focus:outline-none">
                   <div className="py-1">
                     <Menu.Item className="text-3xl">
                       {({ active }) => (
