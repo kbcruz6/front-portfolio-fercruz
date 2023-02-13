@@ -46,8 +46,8 @@ const Gallery = () => {
             // slidesPerView: 1,
           },
           // when window width is >= 768px
-          768: {
-            // width: 768,
+          1244: {
+            width: 768,
             // height: 500,
             // slidesPerView: 3,
           },
@@ -76,30 +76,72 @@ const Gallery = () => {
         }}
         className="mySwiper"
       >
-        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl ">
+        <SwiperSlide
+          className={
+            window.innerWidth > 1200
+              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+          }
+        >
           <img src={slides[0]} className="w-full rounded-2xl sm:h-auto "></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl ">
+        <SwiperSlide
+          className={
+            window.innerWidth > 1200
+              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+          }
+        >
           {" "}
           <img src={slides[1]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl ">
+        <SwiperSlide
+          className={
+            window.innerWidth > 1200
+              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+          }
+        >
           {" "}
           <img src={slides[2]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl ">
+        <SwiperSlide
+          className={
+            window.innerWidth > 1200
+              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+          }
+        >
           {" "}
           <img src={slides[3]} className="w-full rounded-2xl"></img>
         </SwiperSlide>{" "}
-        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl ">
+        <SwiperSlide
+          className={
+            window.innerWidth > 1200
+              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+          }
+        >
           {" "}
           <img src={slides[4]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl ">
+        <SwiperSlide
+          className={
+            window.innerWidth > 1200
+              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+          }
+        >
           {" "}
           <img src={slides[5]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
-        <SwiperSlide className="bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl ">
+        <SwiperSlide
+          className={
+            window.innerWidth > 1200
+              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+          }
+        >
           {" "}
           <img src={slides[6]} className="w-full rounded-2xl"></img>
         </SwiperSlide>
