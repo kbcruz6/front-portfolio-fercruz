@@ -38,11 +38,11 @@ const About = () => {
                 impactful, meaningful artwork. As a muralist, tattoo artist and
                 portraitist, I have honed my skills to produce works that not
                 only aesthetically pleasing but also deeply personal and
-                thought-provoking. .{" "}
+                thought-provoking.{" "}
                 <p className="my-2">
-                  With a background in fine arts and a love for travel, I bring
-                  a unique perspective to my art that draws inspiration from my
-                  experiences and the world around me.
+                  With a background in fine arts, university studies and a love
+                  for travel, I bring a unique perspective to my art that draws
+                  inspiration from my experiences and the world around me.
                 </p>
                 <p className="my-2">
                   Fluent in English, Spanish and Portuguese, I am able to
