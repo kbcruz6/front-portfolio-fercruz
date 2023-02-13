@@ -42,7 +42,7 @@ const Tattoo = () => {
         {/*//! TEXT  */}
         <div className="flex flex-col justify-center pb-2 text-white">
           <h1 className=" text-4xl text-center border-b-4 dark:border-orange-500 border-[var(--color4)]">
-            Tattoo gallery
+            Tattoo's gallery
           </h1>
           <p className="py-3">
             Step into the world of tattoo art at my gallery. Here, you'll find a
