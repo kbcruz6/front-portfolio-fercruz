@@ -3,6 +3,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsWhatsapp, BsInstagram } from "react-icons/bs";
 import { Link } from "react-scroll";
+import { Link as LinkPages, useLocation } from "react-router-dom";
 import "../index.css";
 import { ThemeContext } from "../context/ThemeContext";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -12,6 +13,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
+  const location = useLocation();
 
   const handleNav = () => {
     setNav(!nav);
@@ -36,79 +38,58 @@ const Navbar = () => {
       style={{ backgroundColor: `${color}` }}
     >
       {/*//! Menu */}
-      <ul
-        style={{ color: `${textColor}` }}
-        className="font-bold hidden lg:flex sm:text-xl "
-      >
-        {/*//! HOME  */}
-        <li className="relative group hover:opacity-90 px-0 mx-2 ">
-          <Link to="home" smooth={true} duration={500} className="">
-            Home
-            <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
-          </Link>
-        </li>
+      {location.pathname === "/" ? (
+        <ul
+          style={{ color: `${textColor}` }}
+          className="font-bold hidden lg:flex sm:text-xl "
+        >
+          {/*//! HOME  */}
+          <li className="relative group hover:opacity-90 px-0 mx-2 ">
+            <Link to="home" smooth={true} duration={500}>
+              Home
+              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
+            </Link>
+          </li>
 
-        {/*//! GALLERY  */}
-        <li className="relative group hover:opacity-90 px-0 mx-2">
-          <Link to="gallery" smooth={true} duration={500}>
-            Gallery
-            <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
-          </Link>
-        </li>
+          {/*//! GALLERY  */}
+          <li className="relative group hover:opacity-90 px-0 mx-2">
+            <Link to="gallery" smooth={true} duration={500}>
+              Gallery
+              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
+            </Link>
+          </li>
 
-        {/*//! CATTEGORIES  */}
-        <li className="relative group hover:opacity-90 px-0 mx-2">
-          <Link to="categories" smooth={true} duration={500}>
-            Categories
-            <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
-          </Link>
-        </li>
+          {/*//! CATTEGORIES  */}
+          <li className="relative group hover:opacity-90 px-0 mx-2">
+            <Link to="categories" smooth={true} duration={500}>
+              Categories
+              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
+            </Link>
+          </li>
 
-        {/*//! ABOUT  */}
-        <li className="relative group hover:opacity-90 px-0 mx-2">
-          <Link to="about" smooth={true} duration={500}>
-            Me
-            <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
-          </Link>
-        </li>
-
-        {/*//! CONTACT  */}
-        {/* <li className="relative group hover:opacity-90 px-0 mx-2">
-          <Link to="contact" smooth={true} duration={500}>
-            Contact
-            <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
-          </Link>
-        </li> */}
-
-        {/*//! TOGGLE SWITCH  */}
-        <li className=" relative group hover:opacity-90 px-0 mx-2">
-          <input
-            onChange={onToggle}
-            id="switch"
-            type="checkbox"
-            className="switch-checkbox hidden"
-            checked={checked}
-          />
-          <label
-            className={
-              checked
-                ? "switch-label flex items-center bg-[var(--color2)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
-                : "switch-label flex items-center bg-slate-300 dark:bg-orange-400 w-[45px] h-[25px] rounded-full relative cursor-pointer"
-            }
-            htmlFor="switch"
-          >
-            <span
-              className={
-                checked
-                  ? "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] light "
-                  : "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] moon "
-              }
-            />
-          </label>
-        </li>
-      </ul>
-      {/*//! TOGGLE SWITCH MOBILE */}
-      <div className="sm:hidden relative group hover:opacity-90 px-0 mx-2">
+          {/*//! ABOUT  */}
+          <li className="relative group hover:opacity-90 px-0 mx-2">
+            <Link to="about" smooth={true} duration={500}>
+              Me
+              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
+            </Link>
+          </li>
+        </ul>
+      ) : (
+        <ul
+          style={{ color: `${textColor}` }}
+          className="font-bold hidden lg:flex sm:text-xl "
+        >
+          <li>
+            <LinkPages to="/">
+              Home
+              <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
+            </LinkPages>
+          </li>
+        </ul>
+      )}
+      {/*//! TOGGLE SWITCH  */}
+      <div className=" relative group hover:opacity-90 px-0 mx-2">
         <input
           onChange={onToggle}
           id="switch"
@@ -151,33 +132,38 @@ const Navbar = () => {
             : "lg:hidden absolute left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
         }
       >
-        <ul>
-          <li className="p-4 text-4xl hover:text-gray-500">
-            <Link onClick={handleNav} to="home" smooth="true">
-              Home
-            </Link>
-          </li>
-          <li className="p-4 text-4xl hover:text-gray-500">
-            <Link onClick={handleNav} to="gallery" smooth="true">
-              Gallery
-            </Link>
-          </li>
-          <li className="p-4 text-4xl hover:text-gray-500">
-            <Link onClick={handleNav} to="categories" smooth="true">
-              Categories
-            </Link>
-          </li>
-          <li className="p-4 text-4xl hover:text-gray-500">
-            <Link onClick={handleNav} to="about" smooth="true">
-              About Me
-            </Link>
-          </li>
-          {/* <li className="p-4 text-4xl hover:text-gray-500">
-            <Link onClick={handleNav} to="contact" smooth="true">
-              Contact
-            </Link>
-          </li> */}
-        </ul>
+        {location.pathname === "/" ? (
+          <ul>
+            <li className="p-4 text-4xl hover:text-gray-500">
+              <Link onClick={handleNav} to="home" smooth="true">
+                Home
+              </Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-500">
+              <Link onClick={handleNav} to="gallery" smooth="true">
+                Gallery
+              </Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-500">
+              <Link onClick={handleNav} to="categories" smooth="true">
+                Categories
+              </Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-500">
+              <Link onClick={handleNav} to="about" smooth="true">
+                About Me
+              </Link>
+            </li>
+          </ul>
+        ) : (
+          <ul>
+            <li className="p-4 text-4xl hover:text-gray-500">
+              <LinkPages onClick={handleNav} to="/">
+                Home
+              </LinkPages>
+            </li>
+          </ul>
+        )}
       </div>
 
       {/*//! Social media vertical */}
