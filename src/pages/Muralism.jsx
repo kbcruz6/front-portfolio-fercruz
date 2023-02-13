@@ -45,7 +45,7 @@ const Muralism = () => {
             Muralism gallery
           </h1>
           <p className="py-3">
-            Discover my unique muralism artworks! Each piece is a reflection of
+            Discover my special muralism artworks! Each piece is a reflection of
             my creativity, imagination and my passion for colors and nature.
             From grand public murals to intimate indoor pieces. Thank you for
             taking the time to appreciate my work and I hope you find
