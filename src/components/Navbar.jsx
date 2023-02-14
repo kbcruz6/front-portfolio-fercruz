@@ -173,6 +173,34 @@ const Navbar = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
             </Link>
           </li>
+          {/*//! TOGGLE SWITCH  */}
+          <div className="flex justify-center items-center p-4">
+            <div className=" relative group hover:opacity-90 px-0 mx-2">
+              <input
+                onChange={onToggle}
+                id="switch"
+                type="checkbox"
+                className="switch-checkbox hidden"
+                checked={checked}
+              />
+              <label
+                className={
+                  checked
+                    ? "switch-label flex items-center bg-[var(--color1)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
+                    : "switch-label flex items-center bg-slate-300 dark:bg-orange-400 w-[45px] h-[25px] rounded-full relative cursor-pointer"
+                }
+                htmlFor="switch"
+              >
+                <span
+                  className={
+                    checked
+                      ? "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] light "
+                      : "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] moon "
+                  }
+                />
+              </label>
+            </div>
+          </div>
         </ul>
       ) : (
         <ul
@@ -269,6 +297,34 @@ const Navbar = () => {
             </Transition>
           </Menu>
           {/*//*-------------------------------------------------------------------------------  */}
+          {/*//! TOGGLE SWITCH  */}
+          <div className="flex justify-center items-center p-4">
+            <div className=" relative group hover:opacity-90 px-0 mx-2">
+              <input
+                onChange={onToggle}
+                id="switch"
+                type="checkbox"
+                className="switch-checkbox hidden"
+                checked={checked}
+              />
+              <label
+                className={
+                  checked
+                    ? "switch-label flex items-center bg-[var(--color1)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
+                    : "switch-label flex items-center bg-slate-300 dark:bg-orange-400 w-[45px] h-[25px] rounded-full relative cursor-pointer"
+                }
+                htmlFor="switch"
+              >
+                <span
+                  className={
+                    checked
+                      ? "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] light "
+                      : "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] moon "
+                  }
+                />
+              </label>
+            </div>
+          </div>
         </ul>
       )}
 
