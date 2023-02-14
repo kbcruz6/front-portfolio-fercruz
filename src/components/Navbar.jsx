@@ -182,6 +182,7 @@ const Navbar = () => {
                 type="checkbox"
                 className="switch-checkbox hidden"
                 checked={checked}
+                onClick={handleNav}
               />
               <label
                 className={
@@ -306,6 +307,7 @@ const Navbar = () => {
                 type="checkbox"
                 className="switch-checkbox hidden"
                 checked={checked}
+                onClick={handleNav}
               />
               <label
                 className={

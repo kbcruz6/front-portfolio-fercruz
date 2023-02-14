@@ -30,122 +30,130 @@ const Gallery = () => {
 
   return (
     <div
+      className="pt-20 flex-col h-screen w-full flex justify-center items-center"
       name="gallery"
-      className="h-screen w-full flex justify-center items-center sm:px-28"
     >
-      <Swiper
-        navigation={true}
-        // pagination={true}
-        spaceBetween={50}
-        grabCursor={true}
-        slidesPerView={window.innerWidth < 768 ? 1 : 3}
-        breakpoints={{
-          // when window width is >= 640px
-          640: {
-            width: 640,
-            // slidesPerView: 1,
-          },
-          // when window width is >= 768px
-          1244: {
-            // width: 768,
-            // height: 500,
-            // slidesPerView: 3,
-          },
-        }}
-        effect="coverflow"
-        autoHeight={true}
-        centeredSlides={true}
-        initialSlide={1}
-        zoom={true}
-        speed={500}
-        autoplay={{
-          delay: 1500,
-          disableOnInteraction: true,
-        }}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        }}
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-          padding: 20,
-        }}
-        className="mySwiper"
-      >
-        <SwiperSlide
-          className={
-            window.innerWidth > 1200
-              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
-              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
-          }
+      <h2 className="text-4xl font-bold border-b-4 border-[var(--color4)] text-center text-[var(--color3)] dark:text-white dark:border-orange-500 p-0 m-0">
+        Overview
+      </h2>
+      <div className=" flex h-full w-full dark:bg-slate-900 justify-center items-center sm:px-28 bg-[var(--color1)]">
+        <Swiper
+          navigation={true}
+          // pagination={true}
+          spaceBetween={50}
+          grabCursor={true}
+          slidesPerView={window.innerWidth < 768 ? 1 : 3}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              width: 640,
+              // slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            1244: {
+              // width: 768,
+              // height: 500,
+              // slidesPerView: 3,
+            },
+          }}
+          effect="coverflow"
+          autoHeight={true}
+          centeredSlides={true}
+          initialSlide={1}
+          zoom={true}
+          speed={500}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: true,
+          }}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          style={{
+            "--swiper-navigation-color": "#fff",
+            "--swiper-pagination-color": "#fff",
+            padding: 20,
+          }}
+          className="mySwiper"
         >
-          <img src={slides[0]} className="w-full rounded-2xl sm:h-auto "></img>
-        </SwiperSlide>
-        <SwiperSlide
-          className={
-            window.innerWidth > 1200
-              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
-              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
-          }
-        >
-          {" "}
-          <img src={slides[1]} className="w-full rounded-2xl"></img>
-        </SwiperSlide>
-        <SwiperSlide
-          className={
-            window.innerWidth > 1200
-              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
-              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
-          }
-        >
-          {" "}
-          <img src={slides[2]} className="w-full rounded-2xl"></img>
-        </SwiperSlide>
-        <SwiperSlide
-          className={
-            window.innerWidth > 1200
-              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
-              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
-          }
-        >
-          {" "}
-          <img src={slides[3]} className="w-full rounded-2xl"></img>
-        </SwiperSlide>{" "}
-        <SwiperSlide
-          className={
-            window.innerWidth > 1200
-              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
-              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
-          }
-        >
-          {" "}
-          <img src={slides[4]} className="w-full rounded-2xl"></img>
-        </SwiperSlide>
-        <SwiperSlide
-          className={
-            window.innerWidth > 1200
-              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
-              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
-          }
-        >
-          {" "}
-          <img src={slides[5]} className="w-full rounded-2xl"></img>
-        </SwiperSlide>
-        <SwiperSlide
-          className={
-            window.innerWidth > 1200
-              ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
-              : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
-          }
-        >
-          {" "}
-          <img src={slides[6]} className="w-full rounded-2xl"></img>
-        </SwiperSlide>
-      </Swiper>
+          <SwiperSlide
+            className={
+              window.innerWidth > 1200
+                ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+                : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+            }
+          >
+            <img
+              src={slides[0]}
+              className="w-full rounded-2xl sm:h-auto "
+            ></img>
+          </SwiperSlide>
+          <SwiperSlide
+            className={
+              window.innerWidth > 1200
+                ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+                : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+            }
+          >
+            {" "}
+            <img src={slides[1]} className="w-full rounded-2xl"></img>
+          </SwiperSlide>
+          <SwiperSlide
+            className={
+              window.innerWidth > 1200
+                ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+                : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+            }
+          >
+            {" "}
+            <img src={slides[2]} className="w-full rounded-2xl"></img>
+          </SwiperSlide>
+          <SwiperSlide
+            className={
+              window.innerWidth > 1200
+                ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+                : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+            }
+          >
+            {" "}
+            <img src={slides[3]} className="w-full rounded-2xl"></img>
+          </SwiperSlide>{" "}
+          <SwiperSlide
+            className={
+              window.innerWidth > 1200
+                ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+                : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+            }
+          >
+            {" "}
+            <img src={slides[4]} className="w-full rounded-2xl"></img>
+          </SwiperSlide>
+          <SwiperSlide
+            className={
+              window.innerWidth > 1200
+                ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+                : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+            }
+          >
+            {" "}
+            <img src={slides[5]} className="w-full rounded-2xl"></img>
+          </SwiperSlide>
+          <SwiperSlide
+            className={
+              window.innerWidth > 1200
+                ? "bg-center bg-cover place-self-center max-w-[600px] max-h-[900px]  shadow-lg shadow-black rounded-2xl "
+                : "bg-center bg-cover place-self-center sm:max-w-[300px] sm:max-h-[400px]  shadow-lg shadow-black rounded-2xl "
+            }
+          >
+            {" "}
+            <img src={slides[6]} className="w-full rounded-2xl"></img>
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   );
 };

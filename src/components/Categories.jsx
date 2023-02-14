@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 
 const Categories = () => {
   return (
-    <div className="bg-slate-100 dark:bg-transparent">
+    <div className=" dark:bg-transparent">
       <div
         name="categories"
-        className="w-full md:h-screen text-slate-600 duration-300 bg-white shadow-lg shadow-slate-400 dark:shadow-none dark:text-orange-200 dark:bg-transparent "
+        className="w-full md:h-screen text-slate-600 duration-300 bg-[var(--color1)] shadow-lg shadow-slate-400 dark:shadow-none dark:text-orange-200 dark:bg-transparent "
       >
         <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full duration-300">
           <div className="pb-6 text-center">
