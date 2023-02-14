@@ -46,7 +46,7 @@ const Navbar = () => {
     <div
       style={
         window.innerWidth < 800
-          ? { backgroundColor: "black" }
+          ? { backgroundColor: "transparent" }
           : { backgroundColor: `${color}` }
       }
       className="flex fixed w-full h-[60px]  justify-end items-center px-4 bottom-0 lg:top-0 z-10 ease-in duration-300 text-white "
@@ -271,166 +271,204 @@ const Navbar = () => {
           {/*//*-------------------------------------------------------------------------------  */}
         </ul>
       )}
-      {/*//! TOGGLE SWITCH  */}
-      <div className=" relative group hover:opacity-90 px-0 mx-2">
-        <input
-          onChange={onToggle}
-          id="switch"
-          type="checkbox"
-          className="switch-checkbox hidden"
-          checked={checked}
-        />
-        <label
-          className={
-            checked
-              ? "switch-label flex items-center bg-[var(--color1)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
-              : "switch-label flex items-center bg-slate-300 dark:bg-orange-400 w-[45px] h-[25px] rounded-full relative cursor-pointer"
-          }
-          htmlFor="switch"
+
+      {/*//! MOBILE NAVBAR  */}
+      <div className="bg-black p-2 rounded-full">
+        {/*//! Mobile Button */}
+        <div
+          onClick={handleNav}
+          className="lg:hidden z-50 cursor-pointer text-white"
         >
-          <span
-            className={
-              checked
-                ? "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] light "
-                : "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] moon "
-            }
-          />
-        </label>
-      </div>
-
-      {/*//! Mobile Button */}
-      <div onClick={handleNav} className="lg:hidden z-10 cursor-pointer">
-        {nav ? (
-          <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
-        ) : (
-          <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
-        )}
-      </div>
-
-      {/*//! Mobile Menu  */}
-      <div
-        className={
-          nav
-            ? "lg:hidden absolute left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-            : "lg:hidden absolute left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-        }
-      >
-        {location.pathname === "/" ? (
-          <ul>
-            <li className="p-4 text-4xl hover:text-gray-500">
-              <Link onClick={handleNav} to="home" smooth="true">
-                Home
-              </Link>
-            </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
-              <Link onClick={handleNav} to="gallery" smooth="true">
-                Gallery
-              </Link>
-            </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
-              <Link onClick={handleNav} to="categories" smooth="true">
-                Categories
-              </Link>
-            </li>
-            <li className="p-4 text-4xl hover:text-gray-500">
-              <Link onClick={handleNav} to="about" smooth="true">
-                About Me
-              </Link>
-            </li>
-          </ul>
-        ) : (
-          <ul>
-            <li className="p-4 text-4xl hover:text-gray-500">
-              <LinkPages onClick={handleNav} to="/">
-                Home
-              </LinkPages>
-            </li>
-            {/*//* DROPDOWN WITH CATEGORIES  */}
-            <Menu as="div" className="relative inline-block text-left">
-              <div>
-                <Menu.Button className="inline-flex w-full justify-center text-4xl px-4 py-2 text-white focus:outline-none">
+          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        </div>
+        {/*//! Mobile Menu  */}
+        <div
+          className={
+            nav
+              ? "lg:hidden absolute left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+              : "lg:hidden absolute left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+          }
+        >
+          {location.pathname === "/" ? (
+            <ul>
+              <li className="p-4 text-4xl hover:text-gray-500">
+                <Link onClick={handleNav} to="home" smooth="true">
+                  Home
+                </Link>
+              </li>
+              <li className="p-4 text-4xl hover:text-gray-500">
+                <Link onClick={handleNav} to="gallery" smooth="true">
+                  Gallery
+                </Link>
+              </li>
+              <li className="p-4 text-4xl hover:text-gray-500">
+                <Link onClick={handleNav} to="categories" smooth="true">
                   Categories
-                  <ChevronDownIcon
-                    className="-mr-1 ml-2 h-5 w-5"
-                    aria-hidden="true"
+                </Link>
+              </li>
+              <li className="p-4 text-4xl hover:text-gray-500">
+                <Link onClick={handleNav} to="about" smooth="true">
+                  About Me
+                </Link>
+              </li>
+              {/*//! TOGGLE SWITCH  */}
+              <div className="flex justify-center items-center p-4">
+                <div className=" relative group hover:opacity-90 px-0 mx-2">
+                  <input
+                    onChange={onToggle}
+                    id="switch"
+                    type="checkbox"
+                    className="switch-checkbox hidden"
+                    checked={checked}
                   />
-                </Menu.Button>
+                  <label
+                    className={
+                      checked
+                        ? "switch-label flex items-center bg-[var(--color1)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
+                        : "switch-label flex items-center bg-slate-300 dark:bg-orange-400 w-[45px] h-[25px] rounded-full relative cursor-pointer"
+                    }
+                    htmlFor="switch"
+                  >
+                    <span
+                      className={
+                        checked
+                          ? "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] light "
+                          : "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] moon "
+                      }
+                    />
+                  </label>
+                </div>
               </div>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="absolute right-0 z-10 mt-0 w-56 text-white text-center origin-top-right rounded-md bg-slate-900 focus:outline-none">
-                  <div className="py-1">
-                    <Menu.Item className="text-3xl">
-                      {({ active }) => (
-                        <LinkPages
-                          onClick={handleNav}
-                          to="/muralism"
-                          className={classNames(
-                            active ? "bg-gray-100 text-gray-900" : "text-white",
-                            "block px-4 py-2 text-sm"
-                          )}
-                        >
-                          Muralism
-                        </LinkPages>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item className="text-3xl">
-                      {({ active }) => (
-                        <LinkPages
-                          onClick={handleNav}
-                          to="/tattoo"
-                          className={classNames(
-                            active ? "bg-gray-100 text-gray-900" : "text-white",
-                            "block px-4 py-2 text-sm"
-                          )}
-                        >
-                          Tattoo
-                        </LinkPages>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item className="text-3xl">
-                      {({ active }) => (
-                        <LinkPages
-                          onClick={handleNav}
-                          to="/watercolor"
-                          className={classNames(
-                            active ? "bg-gray-100 text-gray-900" : "text-white",
-                            "block px-4 py-2 text-sm"
-                          )}
-                        >
-                          Watercolor
-                        </LinkPages>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item className="text-3xl">
-                      {({ active }) => (
-                        <LinkPages
-                          onClick={handleNav}
-                          to="/portrait"
-                          className={classNames(
-                            active ? "bg-gray-100 text-gray-900" : "text-white",
-                            "block px-4 py-2 text-sm"
-                          )}
-                        >
-                          Portrait
-                        </LinkPages>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Transition>
-            </Menu>
-            {/*//*-------------------------------------------------------------------------------  */}
-          </ul>
-        )}
+            </ul>
+          ) : (
+            <ul>
+              <li className="p-4 text-4xl hover:text-gray-500">
+                <LinkPages onClick={handleNav} to="/">
+                  Home
+                </LinkPages>
+              </li>
+              {/*//* DROPDOWN WITH CATEGORIES  */}
+              <Menu as="div" className="relative inline-block text-left">
+                <div>
+                  <Menu.Button className="inline-flex w-full justify-center text-4xl px-4 py-2 text-white focus:outline-none">
+                    Categories
+                    <ChevronDownIcon
+                      className="-mr-1 ml-2 h-5 w-5"
+                      aria-hidden="true"
+                    />
+                  </Menu.Button>
+                </div>
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
+                >
+                  <Menu.Items className="absolute right-0 z-10 mt-0 w-56 text-white text-center origin-top-right rounded-md bg-slate-900 focus:outline-none">
+                    <div className="py-1">
+                      <Menu.Item className="text-3xl">
+                        {({ active }) => (
+                          <LinkPages
+                            onClick={handleNav}
+                            to="/muralism"
+                            className={classNames(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-white",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            Muralism
+                          </LinkPages>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item className="text-3xl">
+                        {({ active }) => (
+                          <LinkPages
+                            onClick={handleNav}
+                            to="/tattoo"
+                            className={classNames(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-white",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            Tattoo
+                          </LinkPages>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item className="text-3xl">
+                        {({ active }) => (
+                          <LinkPages
+                            onClick={handleNav}
+                            to="/watercolor"
+                            className={classNames(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-white",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            Watercolor
+                          </LinkPages>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item className="text-3xl">
+                        {({ active }) => (
+                          <LinkPages
+                            onClick={handleNav}
+                            to="/portrait"
+                            className={classNames(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-white",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            Portrait
+                          </LinkPages>
+                        )}
+                      </Menu.Item>
+                    </div>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
+              {/*//*-------------------------------------------------------------------------------  */}
+              {/*//! TOGGLE SWITCH  */}
+              <div className="flex justify-center items-center p-4">
+                <div className=" relative group hover:opacity-90 px-0 mx-2">
+                  <input
+                    onChange={onToggle}
+                    id="switch"
+                    type="checkbox"
+                    className="switch-checkbox hidden"
+                    checked={checked}
+                  />
+                  <label
+                    className={
+                      checked
+                        ? "switch-label flex items-center bg-[var(--color1)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
+                        : "switch-label flex items-center bg-slate-300 dark:bg-orange-400 w-[45px] h-[25px] rounded-full relative cursor-pointer"
+                    }
+                    htmlFor="switch"
+                  >
+                    <span
+                      className={
+                        checked
+                          ? "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] light "
+                          : "switch-button w-[20px] relative h-[20px] rounded-full duration-200 left-[2px] moon "
+                      }
+                    />
+                  </label>
+                </div>
+              </div>
+            </ul>
+          )}
+        </div>
       </div>
 
       {/*//! Social media vertical */}
