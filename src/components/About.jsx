@@ -10,10 +10,10 @@ const About = () => {
       >
         <div className="flex flex-col justify-center items-center w-full h-full">
           <div className="max-w-[1000px] w-full px-4 ">
-            <div className="sm:text-center pb-8 ">
-              <p className="text-4xl font-bold inline text-[var(--color3)] border-b-4 border-[var(--color4)] dark:text-white dark:border-orange-500">
+            <div className="text-center pb-8 ">
+              <h2 className="text-4xl font-bold inline text-[var(--color3)] border-b-4 border-[var(--color4)] dark:text-white dark:border-orange-500">
                 About me 👩🏻‍🎨
-              </p>
+              </h2>
             </div>
           </div>
           <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 sm:items-center">
