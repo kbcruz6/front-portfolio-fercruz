@@ -49,7 +49,7 @@ const Navbar = () => {
           ? { backgroundColor: "transparent" }
           : { backgroundColor: `${color}` }
       }
-      className="flex fixed w-full h-[60px]  justify-end items-center px-4 bottom-0 lg:top-0 z-10 ease-in duration-300 text-white "
+      className="flex fixed w-full h-[60px]  justify-end items-center px-4 bottom-0 lg:top-0 z-10 ease-in duration-300 text-white dark:text "
     >
       {/*//! Menu */}
       {location.pathname === "/" ? (
@@ -188,7 +188,7 @@ const Navbar = () => {
                 className={
                   checked
                     ? "switch-label flex items-center bg-[var(--color1)] w-[45px] h-[25px] rounded-full relative cursor-pointer "
-                    : "switch-label flex items-center bg-slate-300 dark:bg-orange-400 w-[45px] h-[25px] rounded-full relative cursor-pointer"
+                    : "switch-label flex items-center bg-slate-300 dark:bg-orange-500 w-[45px] h-[25px] rounded-full relative cursor-pointer"
                 }
                 htmlFor="switch"
               >
@@ -206,9 +206,9 @@ const Navbar = () => {
       ) : (
         <ul
           style={{ color: `${textColor}` }}
-          className="font-bold hidden lg:flex sm:text-xl justify-center items-center"
+          className="hidden lg:flex sm:text-xl justify-center items-center"
         >
-          <li className="">
+          <li className="uppercase">
             <LinkPages to="/">Home</LinkPages>
           </li>
           {/*//* DROPDOWN WITH CATEGORIES  */}
@@ -218,7 +218,7 @@ const Navbar = () => {
             className="relative inline-block text-left"
           >
             <div>
-              <Menu.Button className="inline-flex w-full justify-center px-4 py-2 text-white focus:outline-none">
+              <Menu.Button className="uppercase inline-flex w-full justify-center px-4 py-2 text-white focus:outline-none">
                 Categories
                 <ChevronDownIcon
                   className="-mr-1 ml-2 h-5 w-5"

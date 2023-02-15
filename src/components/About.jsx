@@ -6,7 +6,7 @@ const About = () => {
     <div className="bg-[var(--color2)] dark:bg-transparent">
       <div
         name="about"
-        className="w-full h-screen text-[var(--color4)] duration-300 sm:rounded-bl-full rounded-tr-[8000px] shadow-lg shadow-[var(--color3)] bg-[var(--color1)] dark:shadow-none dark:bg-transparent dark:text-white"
+        className="w-full h-screen text-[var(--color4)] duration-300 shadow-lg shadow-[var(--color3)] bg-[var(--color1)] dark:shadow-none dark:bg-transparent dark:text-white"
       >
         <div className="flex flex-col justify-center items-center w-full h-full">
           <div className="max-w-[1000px] w-full px-4 ">

@@ -85,7 +85,7 @@ const WaterColor = () => {
       <div className="px-4 sm:px-20">
         {/*//! TEXT  */}
         <div className="flex flex-col justify-center pb-2 text-white">
-          <h1 className=" text-4xl text-center border-b-4 dark:border-orange-500 border-[var(--color4)]">
+          <h1 className="uppercase text-3xl text-center border-b-4 dark:border-orange-500 border-[var(--color4)]">
             Watercolor's gallery
           </h1>
           <p className="py-3">
