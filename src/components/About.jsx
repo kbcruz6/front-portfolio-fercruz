@@ -11,8 +11,8 @@ const About = () => {
         <div className="flex flex-col justify-center items-center w-full h-full">
           <div className="max-w-[1000px] w-full px-4 ">
             <div className="text-center pb-8 ">
-              <h2 className="text-4xl font-bold inline text-[var(--color3)] border-b-4 border-[var(--color4)] dark:text-white dark:border-orange-500">
-                About me 👩🏻‍🎨
+              <h2 className="uppercase text-4xl inline text-[var(--color3)] border-b-4 border-[var(--color4)] dark:text-white dark:border-orange-500">
+                About me
               </h2>
             </div>
           </div>

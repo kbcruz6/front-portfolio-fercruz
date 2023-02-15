@@ -33,8 +33,8 @@ const Gallery = () => {
       className="pt-20 flex-col h-screen w-full flex justify-center items-center dark:bg-slate-900 bg-[var(--color1)]"
       name="gallery"
     >
-      <h2 className="text-4xl font-bold border-b-4 border-[var(--color4)] text-center text-[var(--color3)] dark:text-white dark:border-orange-500 p-0 m-0">
-        Overview
+      <h2 className="uppercase text-4xl border-b-4 border-[var(--color4)] text-center text-[var(--color3)] dark:text-white dark:border-orange-500 p-0 m-0">
+        Gallery
       </h2>
       <div className=" flex h-full w-full  justify-center items-center sm:px-28 ">
         <Swiper

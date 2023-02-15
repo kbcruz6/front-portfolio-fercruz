@@ -55,10 +55,10 @@ const Navbar = () => {
       {location.pathname === "/" ? (
         <ul
           style={{ color: `${textColor}` }}
-          className="font-bold hidden lg:flex sm:text-xl justify-center items-center"
+          className=" hidden lg:flex sm:text-xl justify-center items-center"
         >
           {/*//! HOME  */}
-          <li className="relative group hover:opacity-90 px-0 mx-2 ">
+          <li className="relative group hover:opacity-90 px-0 mx-2 uppercase ">
             <Link to="home" smooth={true} duration={500}>
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
@@ -66,7 +66,7 @@ const Navbar = () => {
           </li>
 
           {/*//! GALLERY  */}
-          <li className="relative group hover:opacity-90 px-0 mx-2">
+          <li className="relative group hover:opacity-90 px-0 mx-2 uppercase">
             <Link to="gallery" smooth={true} duration={500}>
               Gallery
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>
@@ -74,7 +74,7 @@ const Navbar = () => {
           </li>
 
           {/*//! CATTEGORIES  */}
-          <li className="relative group px-0 mx-2">
+          <li className="relative group px-0 mx-2 ">
             {/*//* DROPDOWN WITH CATEGORIES  */}
 
             <Menu
@@ -84,7 +84,7 @@ const Navbar = () => {
               className="relative group inline-block text-left"
             >
               <Link to="categories" smooth="true" duration={300}>
-                <Menu.Button className=" inline-flex w-full justify-center text-white focus:outline-none">
+                <Menu.Button className=" inline-flex w-full justify-center text-white focus:outline-none uppercase">
                   Categories
                   <ChevronDownIcon
                     className="-mr-1 ml-2 h-5 w-5"
@@ -167,7 +167,7 @@ const Navbar = () => {
           </li>
 
           {/*//! ABOUT  */}
-          <li className="relative group hover:opacity-90 px-0 mx-2">
+          <li className="relative group hover:opacity-90 px-0 mx-2 uppercase">
             <Link to="about" smooth={true} duration={500}>
               Me
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[var(--color1)] dark:bg-orange-500 transition-all group-hover:w-full"></span>

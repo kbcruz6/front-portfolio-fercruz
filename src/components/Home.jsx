@@ -14,10 +14,10 @@ const Home = () => {
         data-aos-duration="1000"
         className=" px-8 flex flex-col h-full duration-300 gap-2 justify-start pt-40 sm:justify-center sm:pt-20"
       >
-        <h1 className="text-5xl sm:text-6xl font-bold text-[var(--color3)] dark:text-orange-400 ">
+        <h1 className="uppercase text-4xl sm:text-5xl text-[var(--color3)] dark:text-orange-400 ">
           Fernanda Cruz
         </h1>{" "}
-        <h2 className="text-3xl sm:text-4xl font-bold ">
+        <h2 className="text-2xl sm:text-3xl">
           Muralist, Tattoo Artist & Portraitist.
         </h2>
         <div>

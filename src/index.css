@@ -6,7 +6,7 @@
 
 @layer base{
   body{
-    @apply font-[Raleway]
+    @apply font-[futura]
   }
   li{
     @apply px-4;

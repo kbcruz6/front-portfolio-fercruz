@@ -14,7 +14,7 @@ const Categories = () => {
       >
         <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full duration-300">
           <div className="pb-6 text-center">
-            <p className="text-4xl font-bold inline border-b-4 border-[var(--color4)] text-[var(--color3)] dark:text-white dark:border-orange-500">
+            <p className="uppercase text-4xl inline border-b-4 border-[var(--color4)] text-[var(--color3)] dark:text-white dark:border-orange-500">
               Categories
             </p>
           </div>
@@ -33,7 +33,7 @@ const Categories = () => {
                     style={{ backgroundImage: `url(${muralism})` }}
                     className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[180px] sm:h-[300px]"
                   ></div>{" "}
-                  <div className="font-bold text-xl my-2 flex justify-center items-center">
+                  <div className="uppercase text-lg my-2 flex justify-center items-center">
                     Muralism{" "}
                   </div>
                 </Link>
@@ -51,7 +51,7 @@ const Categories = () => {
                     style={{ backgroundImage: `url(${tattoo})` }}
                     className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[180px] sm:h-[300px]"
                   ></div>{" "}
-                  <div className="font-bold text-xl my-2 flex justify-center items-center">
+                  <div className="uppercase text-lg my-2 flex justify-center items-center">
                     Tattoo{" "}
                   </div>
                 </Link>
@@ -69,7 +69,7 @@ const Categories = () => {
                     style={{ backgroundImage: `url(${waterColors})` }}
                     className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[180px] sm:h-[300px]"
                   ></div>
-                  <div className="font-bold text-xl my-2 flex justify-center items-center">
+                  <div className="uppercase text-lg my-2 flex justify-center items-center">
                     Watercolor
                   </div>
                 </Link>
@@ -87,7 +87,7 @@ const Categories = () => {
                     style={{ backgroundImage: `url(${portraits})` }}
                     className="group container rounded-3xl flex justify-center items-center mx-auto bg-cover bg-center bg-no-repeat h-[180px] sm:h-[300px]"
                   ></div>
-                  <div className="font-bold text-xl my-2 flex justify-center items-center">
+                  <div className="uppercase text-lg my-2 flex justify-center items-center">
                     Portrait
                   </div>
                 </Link>
