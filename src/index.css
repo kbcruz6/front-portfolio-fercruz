@@ -13,11 +13,11 @@
     @apply cursor-pointer;
   }
 }
-@media (max-width:640px) {
+/* @media (max-width:640px) {
   body{
     font-family:'Trebuchet MS', sans-serif
   } 
-}
+} */
 .outline-white input:focus-within ~ label,
 .outline-white input:not(:placeholder-shown) ~ label {
   @apply transform scale-75 -translate-y-3 z-0 ml-3 px-1 py-0;
